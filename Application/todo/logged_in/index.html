@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="en" id="html" class="bgColor">
+<head>
+	<meta charset="UTF-8">
+	<title>Todo list</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96116337-2"></script>
+	<script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-96116337-2');
+	</script>
+	<meta name="google-signin-scope" content="profile email">
+	<meta name="google-signin-client_id" content="715262885657-oe60v2hhlm35k0bupvgv9cfmkuf7s0m1.apps.googleusercontent.com">
+	<!– To support new sizes –>
+	<link rel="apple-touch-icon" sizes="60×60" href="http://www.oliver-brodersen.com/todo/icon/60x60.png">
+	<link rel="apple-touch-icon" sizes="120×120" href="http://www.oliver-brodersen.com/todo/icon/120x120.png">
+	<link rel="apple-touch-icon" sizes="180×180" href="http://www.oliver-brodersen.com/todo/icon/180x180.png">
+	
+	<!– To support Android –>
+	<link rel="icon" sizes="192×192" href="http://www.oliver-brodersen.com/todo/icon/192x192.png">
+	<link rel="icon" sizes="128×128" href="http://www.oliver-brodersen.com/todo/icon/128x128.png">
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<script src="https://apis.google.com/js/api.js"></script>
+	<link rel="stylesheet" href="script/style.css">
+	<link id="linkIco" rel="icon" type="image/png" href="css/icon.png" />
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body class="bgColor">
+	<div class="bar elevate">You are offline</div>
+	<div class="bgColor" id="body"></div>
+	<button class="material-button elevate baseColor" id="settingsB" onclick="toggleSettings();">SETTINGS</button>
+	<div id="settingsW" class="ease elevate scrollbar vertical">
+			<div id="authorize-button" class="g-signin2" data-onsuccess="onSignIn" data-theme="light" style="margin-bottom: 1.2rem"></div>
+			<h4 id="colorPalh4" class="">Color Pallette</h4>
+			<h5>Base</h5>
+			<input id="baseColorPick" class="jscolor {onFineChange:'colorUpdateInit(this)'} colorInput" value="264260" onchange="colorUpdate('baseColor', 'background-color', this.value, false)">
+			<h5>Text</h5>
+			<input id="textColorPick" class="jscolor {onFineChange:'colorUpdateInit(this)'} colorInput" value="464646" onchange="colorUpdate('textColor', 'color', this.value, false)">
+			<h5>Ground</h5>
+			<input id="bgColorPick" class="jscolor {onFineChange:'colorUpdateInit(this)'} colorInput" value="EDF0F6" onchange="colorUpdate('bgColor', 'background-color', this.value, false)">
+			<h5>Theme</h5>
+			<div class="paletteC scrollbar">
+				<div id="baseColorPal" class="paletteP" title="#264260" onclick="colorUpdate('baseColor', 'background-color', this.title.slice(1), true)">
+					<div class="paletteCo" id="baseColorQ" style="background: #264260">
+						<button class="paletteE" onmouseover="onPreview = true" onmouseout="onPreview = false" onclick="editPal('baseColorPal')"></button>
+						<p>BASE</p>
+					</div>
+					<span id="baseColorHex">#264260</span>
+					<span id="baseColorRgb">rgb(38,66,96)</span>
+					<div class="seperation"></div>
+					<span>Set to current</span>
+					<button class="material-button" id="setCbase" onmouseover="onPreview = true" onmouseout="onPreview = false" onclick="updatePalette('baseColor')">SET</button>
+				</div>
+				<div id="textColorPal" class="paletteP" title="#464646" onclick="colorUpdate('textColor', 'color', this.title.slice(1), true)">
+					<div class="paletteCo" id="textColorQ" style="background: #464646">
+						<button class="paletteE" onmouseover="onPreview = true" onmouseout="onPreview = false" onclick="editPal('textColorPal')"></button>
+						<p>TEXT</p>
+					</div>
+					<span id="textColorHex">#464646</span>
+					<span id="textColorRgb">rgb(70,70,70)</span>
+					<div class="seperation"></div>
+					<span>Set to current</span>
+					<button class="material-button" id="setCtext" onmouseover="onPreview = true" onmouseout="onPreview = false" onclick="updatePalette('textColor')">SET</button>
+				</div>
+				<div id="bgColorPal" class="paletteP" title="#EDF0F6" onclick="colorUpdate('bgColor', 'background-color', this.title.slice(1), true)">
+					<div class="paletteCo" id="bgColorQ" style="background: #EDF0F6">
+						<button class="paletteE" onmouseover="onPreview = true" onmouseout="onPreview = false" onclick="editPal('bgColorPal')"></button>
+						<p>GROUND</p>
+					</div>
+					<span id="bgColorHex">#EDF0F6</span>
+					<span id="bgColorRgb">rgb(239,239,239)</span>
+					<div class="seperation"></div>
+					<span>Set to current</span>
+					<button class="material-button" id="setCbg" onmouseover="onPreview = true" onmouseout="onPreview = false" onclick="updatePalette('bgColor')">SET</button>
+				</div>
+			</div>
+
+			<h4>Reddit image</h4>
+			<h5>Toggle image</h5>
+			<div class="toggle-btn active" id="redToggle">
+				<input id="redToggle" type="checkbox" checked class="cb-value" />
+				<span class="round-btn"></span>
+			</div>
+			<h5>Subdreddit</h5>
+			<label for="subredditInput" class="elevate">/r/</label>
+			<input type="text" class="colorInput" id="subredditInput" style="border-bottom-width: 0;" oninput="getImgRed(this.value); errorLog = 0" value="earthporn" />
+
+			<p id="copyright">©2018 oliver-brodersen.com ALL RIGHTS RESERVED</p>
+		</div>
+		<div id="redditC">
+			<button class="paletteE elevate redditReload" onclick="getImgRed(subreddit)">&#x21bb</button>
+			<div id="redditLoading" class="loading elevate">Loading</div>
+			<img id="redditImg" />
+			<p id="redditCaption"></p>
+			<p id="redditSelf"></p>
+			<p id="redditDate"></p>
+		</div>
+		<div class="timeCont">
+			<p class="time textColor" id="clock" data-end=""></p>
+			<p class="time textColor" id="date"></p>
+		</div>
+		<div id="cookieNot" class="ease">
+			<p>This website uses cookies. <a href="#">Learn more</a></p>
+			<button onclick="$('#cookieNot').css('top', '15rem'); $.cookie('cookieNot', 'true', { expires: 365 * 10 });">✖</button>
+		</div>
+		<main id="todolist">
+			<h1>
+				Todo List
+				<span id="MovQuo">Get stuff done</span>
+			</h1>
+			<template v-if="todo.length">
+				<transition-group name="todolist" tag="ul">
+					<li v-for="item in todoByStatus" class="liList" v-bind:class="[item.done ? 'done' : '', item.cal ? 'calLi' : '']" v-bind:key="item.id" onmouseover="updateSince(this, false)">
+						<span class="label" v-bind:class="item.cal ? 'calLabel' : ''">{{item.label}}</span>
+						<span class="timeStamp" v-bind:class="item.cal ? 'time' : ''">{{updateSince(item.time, true)}}</span>
+						<span class="timeStampDate" style="visibility: hidden">{{item.time}}</span>
+						<div class="actions">
+							<button class="btn-picto" type="button" v-on:click="markAsDoneOrUndone(item)" v-bind:aria-label="item.done ? 'Undone' : 'Done'" v-bind:title="item.done ? 'Undone' : 'Done'">
+								<i aria-hidden="true" class="material-icons">{{ item.done ? 'check_box' : 'check_box_outline_blank' }}</i>
+							</button>
+							<button class="btn-picto" type="button" v-on:click="deleteItemFromList(item)" aria-label="Close" title="Delete">
+								<i aria-hidden="true" class="material-icons" style="color: #f44336">close</i>
+							</button>
+						</div>
+					</li>
+				</transition-group>
+			</template>
+			<p v-else class="emptylist" id="emptyList">Your todo list is empty.</p>
+			<form v-on:submit.prevent="addItem" action="" method="post" name="newform">
+				<label for="newitem" id="addList" class="taskPlace">Task</label>
+				<input type="search" name="newitem" placeholder="E.g. Remember milk" id="newitem" class="ease taskInput" v-model="newitem" autocomplete="off">
+				<input type="hidden" name="varname" id="hiddenHolder" value="">
+				<input type="submit" id="addItem" class="material-button ease taskSubmit" value="Add" name="SubmitButton" />
+			</form>
+		</main>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/sketch.js/1.0.0/sketch.min.js'></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script src="script/cookie/jquery.cookie.js"></script>
+	<script src="script/jscolor.js"></script>
+	<script src="script/moment.js">moment([2017, 10, 25]).fromNow();</script>
+	<script async defer src="https://apis.google.com/js/api.js"
+			onload="this.onload=function(){};handleClientLoad()"
+			onreadystatechange="if (this.readyState === 'complete') this.onload()">
+	</script>
+	<script src="script/style.js"></script>
+	<div id="scriptholder"></div>
+</body>
+</html>

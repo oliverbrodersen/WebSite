@@ -1,0 +1,39 @@
+﻿header{
+    height: 20em;
+}
+h1{
+    font-size: 3em;
+    margin-top: 50px;
+}
+#cFoto{
+    height: 50%;
+}
+#about1, #about2, #cardHolder{
+    animation-name: none;
+    animation-fill-mode: none;
+
+    -webkit-animation-name: none;
+    -webkit-animation-fill-mode: none;
+}
+.a1{
+    text-align: center;
+    left: 50%;
+    margin-left: 0;
+}
+#about1{
+    height: 200px;
+    width: 850px;
+}
+.display{
+    margin: 0;
+    left: 0;
+    transform: translate(0, 0);
+}
+#forlobText{
+    position: relative;
+    width: 750px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 200px;
+    margin-top: 70px;
+}

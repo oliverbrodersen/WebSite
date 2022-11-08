@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono|Lobster|Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <title>Speedcube timer</title>
+    <meta name="description" content="A timer for speed cubing. Log in to save scores in the cloud and get statistics on your times. This site saves all information for you so the only thing you will need to do is start cubing." />
+    <meta property="og:description" content="A timer for speed cubing. Log in to save scores in the cloud and get statistics on your times. This site saves all information for you so the only thing you will need to do is start cubing." />
+    <meta property="og:site_name" content="Speedcube timer" />
+    <meta property="og:title" content="Speedcube timer">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://oliver-brodersen.com/" />
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <meta name="author" content="Oliver Brodersen" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@oliverbrodersen">
+    <link href="https://plus.google.com/u/0/107507810385860800591" rel="publisher" />
+</head>
+<body data-theme="false" id="body">
+    <div id="message"></div>
+    <div id="progress"></div>
+    <h1 id="timer">0:00.00</h1>
+    <div id="leftL" class="hand">
+        <div id="handLY" class="show"></div>
+        <div id="handLR" class=""></div>
+        <div id="handLG" class=""></div>
+        <img src="hand.png" />
+    </div>
+    <div id="leftR" class="hand">
+        <div id="handRY" class="show"></div>
+        <div id="handRR" class=""></div>
+        <div id="handRG" class=""></div>
+        <img src="hand.png" />
+    </div>
+    <div id="statCont">
+        <div id="statsTimes">
+            Times
+            <div id="TimesCont">
+            </div>
+            <button id="undo" onclick="doUndo();">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 400 400" style="enable-background:new 0 0 409.151 409.15; margin-top: 10px;" xml:space="preserve">
+                    <g>
+                        <path style="fill: white;" d="M212.018,7.461c-60.921,0-118.198,28.518-155.245,75.784L0.122,50.491L0,237.986l162.426-93.645l-52.213-30.21
+                            c25.648-28.724,62.548-46.02,101.805-46.02c75.233,0,136.475,61.213,136.475,136.465c0,75.25-61.241,136.468-136.475,136.468
+                            v60.645c108.701,0,197.133-88.423,197.133-197.112C409.151,95.891,320.719,7.461,212.018,7.461z"/>
+                    </g>
+                </svg>
+            </button>
+    </div>
+    </div>
+</body>
+</html>

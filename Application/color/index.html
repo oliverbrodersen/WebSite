@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="" id="html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #body{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: calc(50% - 15vmin);
+            height: 80vmin;
+            width: 50vmin;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            border-radius: 15px;
+        }
+        h1{
+            position: absolute;
+            text-align: center;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: sans-serif;
+            font-size: 4vmin;
+            opacity: .4;
+        }
+        #list{
+            width: 25vmin;
+            height: 50vmin;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: calc(50% - 15vmin);
+            left: calc(50% + 27.5vmin);
+            background: white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            border-radius: 15px;
+            box-sizing: border-box;
+            padding: 2vmin;
+            overflow-y: auto;
+        }
+        #colors{
+            width: 25vmin;
+            height: 25vmin;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: calc(50% + 27.5vmin);
+            left: calc(50% + 27.5vmin);
+            background: white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            border-radius: 15px;
+            box-sizing: border-box;
+            padding: 2vmin;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+        }
+        .item{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 1vmin;
+            border-radius: 15px;
+            font-size: 1.4vmin;
+            font-family: sans-serif;
+            color: #414141;
+            cursor: pointer;
+        }
+        .item:hover{
+            background: #f9f9f9;
+        }
+        .item div{
+            height: 2vmin;
+            width: 2vmin;
+            float: right;
+            margin-right: 1vmin;
+        }
+        .color{
+            height: .5vmin;
+            width: .5vmin;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="body">
+        <h1 id="text">rgba(125,124,123)</h1>
+    </div>
+    <diV id="list">
+    </diV>
+    <div id="colors">
+        
+    </div>
+<script>
+    const difference = 110;
+
+    function getColor(a, b, c, t){
+        let largest;
+        if(t === ""){
+            do{
+                a = Math.floor(Math.random() * (255 - 110)) + 110;
+                b = Math.floor(Math.random() * (255 - 110)) + 110;
+                c = Math.floor(Math.random() * (255 - 110)) + 110;
+                largest = a;
+                if(b > largest)
+                    largest = b;
+                if(c > largest)
+                    largest = c;
+            }
+            while((a + b + c) < (difference * 4.1) || largest < 200);
+        }
+        const colorCode = "rgb(" + a + "," + b + "," + c + ")";
+        const colorCodeA = "rgba(" + a + "," + b + "," + c + ",.2)";
+        document.getElementById("body").style.backgroundColor = colorCode;
+        document.getElementById("text").innerHTML = colorCode + "<br>" + rgbToHex(a,b,c);
+        document.getElementById("html").style.backgroundColor = colorCodeA;
+        if(t === ""){
+            document.getElementById("list").innerHTML += "<div class='item' onmouseover='getColor(" + a + "," + b + "," + c + ", this)'>" + colorCode + "<div style='background: " + colorCode + "'> </div></div>";
+            document.getElementById("colors").innerHTML += "<div onmouseover='getColor(" + a + "," + b + "," + c + ", this)' class='color' style='background-color: " + colorCode + ";'></div>";
+        }
+        else{
+        }
+    }
+    function componentToHex(c) {
+      var hex = c.toString(16);
+      return hex.length == 1 ? "0" + hex : hex;
+    }
+    function rgbToHex(r, g, b) {
+      return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+    }
+    for(var i = 0; i < 1806; i++){
+       getColor("","","","");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+﻿body[data-theme=false] {
+    --background: #f8f8f8;
+    --color: #373732;
+    --yello: #EFD812;
+    --gree: #86d136;
+    --re: #d13636;
+    --scale: 0;
+}
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Condensed', sans-serif;
+    background: var(--background);
+}
+h1 {
+    font-size: 12em;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--color);
+    width: 100%;
+    position: absolute;
+    text-align:center;
+    transform: translate(-50%, -150%);
+    left: 50%;
+    top: 50%;
+}
+#highscore, #highscoreB{
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 8em;
+    top: 2em;
+    color: var(--yello);
+    animation: high 3s ease infinite both, rotate 5s ease-in infinite both;
+    transform: translate(-50%, -70%);
+}
+#highscoreB{
+    animation-delay: .2s;
+    opacity: .4;
+}
+#message{
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    top: 30%;
+    color: #797979;
+    text-align: center;
+    font-size: 2em;
+    transform: translate(-50%, 0%);
+}
+@keyframes high{
+    0%{font-size: 6em;}
+    50%{font-size: 8em;}
+    100%{font-size: 6em;}
+}
+@keyframes rotate{
+    0%{transform: translate(-50%, -70%) rotate(10deg)}
+    50%{transform:translate(-50%, -70%) rotate(-10deg)}
+    100%{transform:translate(-50%, -70%) rotate(10deg)}
+}
+#progress {
+    position: absolute;
+    transform: translate(-50%, -200%);
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 5em;
+    background: var(--re);
+}
+.anim {
+    animation-name: progress;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+}
+@keyframes progress{
+    from{width: 0;}
+    to{width:calc(70% - 25em)}
+}
+.hand {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    height: 15em;
+    width: 15em;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .1), 0 1px 6px rgba(0, 0, 0, .05), 0 8px 8px rgba(0, 0, 0, .1), 0 16px 16px rgba(0, 0, 0, .1), 8px 32px 32px rgba(0, 0, 0, .15);
+}
+
+.hand img{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 8em;
+    top: 7.5em;
+    pointer-events: none;
+}
+#leftR {
+    left: unset !important;
+    right: 15% !important;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+#handLY, #handLR, #handLG, #handRY, #handRR, #handRG {
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    left: 50%;
+    top: 50%;
+    height: 15em;
+    width: 15em;
+    border-radius: 50%;
+    transition: transform cubic-bezier(.33,.11,.02,.99) .2s;
+}
+#handRY, #handLY {
+    background: var(--yello);
+}
+#handRG, #handLG {
+    background: var(--gree);
+}
+#handRR, #handLR {
+    background: var(--re);
+}
+.show {
+    transform: translate(-50%, -50%) scale(1) !important;
+}
+.hide {
+    transform: translate(-50%, -50%) scale(0);
+}
+#statCont{
+    position: absolute;
+    width: 80%;
+    height: 252px;
+    top: 60%;
+    left: 10%;
+}
+
+#statsTimes{
+    overflow: hidden;
+    position: absolute;
+    transform: translate(-50%, 0);
+    left: 50%;
+    height: 252px;
+    width: 232px;
+    background: white;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .1), 0 1px 6px rgba(0, 0, 0, .05), 0 8px 8px rgba(0, 0, 0, .1), 0 16px 16px rgba(0, 0, 0, .1);
+    color: var(--color);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 30px;
+    padding: 12px;
+}
+#TimesCont{
+    position: absolute;
+    width: 232px;
+    left: 20px;
+    overflow: hidden auto;
+    height: 218px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.times{
+    width: 100%;
+    font-size: 24px;
+    text-align: right;
+    height: 25px;
+    margin-bottom: 10px;
+}
+.times span {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 0;
+    color: #b2b2b2;
+    float: left;
+}
+h6{
+    margin: 0;
+    margin-right: 30px;
+}
+.delete{
+    float: right;
+    font-size: 16px;
+    color: var(--re);
+    border:0;
+    padding:0;
+    background: none;
+    height: 18px;
+    width: 18px;
+    margin-left: 38px;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+.best{
+    background: var(--yello) !important;
+    border-radius: 12px !important;
+    color: white !important;
+    width: 100%;
+    font-size: 24px;
+    text-align: right;
+ }
+ .best span{
+     color: white !important;
+
+ }
+ #undo{
+    border:0;
+    padding:0;
+    background: none;
+     position: absolute;
+     font-family: 'Oswald', sans-serif;
+     width: 40px;
+     height: 40px;
+     top: -45px;
+     right: 10px;
+     margin: 0;
+     font-size: 18px;
+     color: white;
+     text-align: center;
+     background: #007bff;
+     border-radius: 0 0 5px 5px;
+    -webkit-box-shadow: 0 2px 6px 0 rgba(50, 50, 50, 0.35);
+    -moz-box-shadow:    0 2px 6px 0 rgba(50, 50, 50, 0.35);
+    box-shadow:         0 2px 6px 0 rgba(50, 50, 50, 0.35);
+    cursor: pointer;
+    transition: top ease-out .2s;
+ }

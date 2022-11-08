@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Tove Sand Personlig træning</title>
+    <link rel="stylesheet" type="text/css" href="scripts/style.css">
+    <link rel="stylesheet" type="text/css" href="scripts/styleBase.css">
+    <link rel="shortcut icon" href="assets/icon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="scripts/script.js"></script>
+    <script>
+        //Menu reveal
+        var h = $(window).height() * 0.3,
+            title = document.location.href.match(/[^\/]+$/)[0].slice(0, -5);
+
+        $(document).ready(function () {
+            document.title = "Tove Sand | " + title;
+            document.getElementById("titleHere").innerHTML = title;
+            document.getElementById("copyright").innerHTML = "&copy;" + (new Date).getFullYear() + " <i>tovesand.dk</i> &#09; ALL RIGHTS RESERVED";
+            $(window).scroll(function () {
+                    if ($(window).scrollTop() > h) {
+                        //When it is scrolled over
+                        $("div.menuCont").addClass("scroll");
+                        $("body").get(0).style.setProperty("--menu-color", "black");
+                    }
+                    else {
+                        $("div.menuCont").removeClass("scroll");
+                        $("body").get(0).style.setProperty("--menu-color", "white");
+                    }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <a href="main.html" title="Hjem"><h1>Tove Sand</h1></a>
+        <h1 class="thick" id="titleHere"> </h1>
+        <div class="menuCont">
+            <ul id="menu" class="hm">
+                <a href="Om.html"><li>Om mig</li></a>
+                <a href="Service.html"><li>Service</li></a>
+                <a href="Priser.html"><li>Priser</li></a>
+                <a href="Blog.html"><li>Blog</li></a>
+                <a href="Kontakt.html"><li>Kontakt</li></a>
+            </ul>
+        </div>
+    </header>
+    <div id="about1" style="height: 500px; padding-top: 1px;">
+        <h3 class="a1">Du kan til hver en tid kontakte mig på mail eller telefon, og jeg vil hurtigst muligt kontakte dig tilbage </h3>
+        <div id="contactCont">
+            <div class="contactHold">
+                <svg version="1.1" id="phoneSvg" class="contSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 290.031 290.031" style="enable-background:new 0 0 290.031 290.031;" xml:space="preserve">
+                    <g id="XMLID_340_">
+                                    <path id="XMLID_341_" d="M45.395,271.896c11.846,11.847,28.588,18.115,48.402,18.115c39.641,0,89.543-25.276,130.232-65.964
+		                    c29.127-29.126,50.531-62.819,60.27-94.872c10.721-35.286,6.307-65.038-12.433-83.775L230.878,4.413
+		                    c-5.857-5.858-15.355-5.858-21.213,0l-61.366,61.363c-2.813,2.813-4.393,6.629-4.393,10.607c0,3.978,1.58,7.793,4.393,10.606
+		                    l30.445,30.445l-61.354,61.353l-30.445-30.445c-5.858-5.857-15.355-5.857-21.213,0.001l-61.34,61.339
+		                    c-5.857,5.858-5.857,15.355,0,21.213C4.393,230.895,44.803,271.305,45.395,271.896z" />
+                    </g>
+                </svg>
+                <a class="cInfo cText" id="phone" href="tel:+4531484988">31 48 49 88</a>
+            </div>
+            <div class="contactHold">
+                <svg version="1.1" id="mailSvg" class="contSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 330.001 330.001" style="enable-background:new 0 0 330.001 330.001;" xml:space="preserve">
+                    <g id="XMLID_348_">
+                                    <path id="XMLID_350_" d="M173.871,177.097c-2.641,1.936-5.756,2.903-8.87,2.903c-3.116,0-6.23-0.967-8.871-2.903L30,84.602
+		                    L0.001,62.603L0,275.001c0.001,8.284,6.716,15,15,15L315.001,290c8.285,0,15-6.716,15-14.999V62.602l-30.001,22L173.871,177.097z" />
+                                    <polygon id="XMLID_351_" points="165.001,146.4 310.087,40.001 19.911,40 	" />
+                    </g>
+                </svg>
+                <a class="cInfo cText" id="mail" href="mailto:tovesandbrodersen@gmail.com">tovesandbrodersen@gmail.com</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h5 style="text-align:center;cursor:pointer;"><a style="margin-left:-20px; text-decoration: none;color:#A0A0A0;" href="main.html">Home</a><a style="margin-left:20px;" onclick="$('html, body').animate({scrollTop: 0 }, 600);">Top</a></h5>
+        <div id="infoCont">
+            <h6>E-mail: <a class="cInfo" href="mailto:tovesandbrodersen@gmail.com">tovesandbrodersen@gmail.com</a></h6>
+            <h6>Nummer: <a class="cInfo" href="tel:+4531484988">31 48 49 88</a></h6>
+        </div>
+        <div id="socialCont">
+            <a href="https://www.facebook.com/personligtraenertovesand" target="_blank" title="Facebook: @personligtraenertovesand">
+                <svg class="socialFoot" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10240 10240" preserveAspectRatio="xMidYMid meet">
+                    <g id="layer1" stroke="none">
+                        <path d="M400 10226 c-88 -20 -159 -63 -241 -145 -84 -84 -125 -154 -145 -246 -20 -89 -20 -9341 0 -9430 20 -92 61 -162 145 -246 84 -84 154 -125 246 -145 89 -20 9341 -20 9430 0 92 20 162 61 246 145 84 84 125 154 145 246 11 49 13 926 13 4715 0 5038 4 4717 -54 4830 -36 71 -164 199 -235 235 -109 56 -65 54 -1533 55 l-1357 0 2 -1987 3 -1988 657 -3 658 -2 5 -23 c2 -12 45 -339 95 -727 49 -388 92 -720 95 -737 l6 -33 -758 -2 -758 -3 -3 -588 c-2 -550 -1 -594 17 -684 51 -246 180 -384 427 -455 77 -21 95 -22 607 -26 l527 -3 0 -678 0 -678 -47 -6 c-347 -44 -1222 -63 -1458 -32 -864 114 -1427 625 -1595 1449 -48 235 -52 307 -59 1021 l-6 680 -667 3 -668 2 0 760 0 760 668 2 667 3 3 1988 2 1987 -2512 -1 c-1948 -1 -2525 -4 -2568 -13z" />
+                    </g>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/tovesand2/" target="_blank" title="Instagram: @tovesand2">
+                <svg class="socialFoot" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5120 5120" preserveAspectRatio="xMidYMid meet">
+                    <g id="layer1" stroke="none">
+                        <path d="M1814 4850 c-132 -4 -271 -10 -310 -14 -375 -38 -627 -148 -850 -370 -242 -243 -343 -497 -376 -946 -16 -226 -16 -1694 0 -1920 33 -450 133 -703 376 -946 243 -242 497 -343 946 -376 226 -16 1694 -16 1920 0 450 33 703 133 946 376 242 243 343 497 376 946 16 226 16 1694 0 1920 -33 449 -134 703 -376 946 -239 238 -498 343 -922 374 -179 13 -1417 21 -1730 10z m1681 -451 c83 -5 191 -18 240 -28 349 -72 564 -287 636 -636 34 -164 42 -379 42 -1175 0 -796 -8 -1011 -42 -1175 -72 -349 -287 -564 -636 -636 -164 -34 -379 -42 -1175 -42 -796 0 -1011 8 -1175 42 -349 72 -564 287 -636 636 -34 164 -42 379 -42 1175 0 982 11 1143 92 1343 114 285 331 436 701 488 193 27 1618 33 1995 8z" />
+                        <path d="M2465 3744 c-211 -29 -296 -54 -439 -127 -327 -167 -556 -467 -632 -829 -23 -111 -24 -332 -1 -449 47 -240 153 -436 332 -614 176 -177 366 -280 607 -331 113 -24 343 -24 456 0 359 76 660 303 826 624 95 184 130 332 129 547 0 209 -35 354 -129 537 -166 320 -479 557 -826 623 -81 15 -270 27 -323 19z m245 -456 c252 -47 472 -241 554 -489 90 -270 21 -565 -179 -764 -290 -291 -760 -291 -1050 0 -291 290 -291 760 0 1050 178 179 419 251 675 203z" />
+                        <path d="M3687 1616 c-94 -35 -164 -110 -188 -201 -14 -52 -6 -152 15 -194 76 -146 247 -207 388 -138 185 91 221 333 69 470 -22 20 -55 44 -73 53 -44 23 -161 29 -211 10z" />
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <h5 style="text-align:center;" id="copyright">©2017 tovesand.dk ALL RIGHTS RESERVED</h5>
+    </div>
+</body>
+</html>

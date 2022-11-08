@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "oliver-brodersen",
+  "private_key_id": "2862c60dc7fe59880e2b9e6817873cdd15659a98",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCbBL3byrewDDo/\nKx0jKfOnjuKQGM3zaY2nYwgaj8m8ogn/3bOWYXJRDQzCrjGaY5pqym9Grzwsjwrf\n/dJj1QXSHxRyaQQkutazvdzPViAfUfGFphqDcfUbpPVs3gha19KJURyDM1IaNwH7\nna6OmrJubsNdBVnW7002EqSzThpsFYkqCEpx1A9vzTzgsOWjc/hRwwaJXw2+ywmw\n1lQJYS3gXtZ+eLcIDfmeStaIpr+1ElNhbGZEfV/zTA1CJBOuH+63bO82A+24G5um\nPVFl2vixu5Y6hWcx0T3BJYkzG0U/XwVYZpvHkO8HRbTrxNmwNE708QtVPvxdAxRX\nWJG2/rrjAgMBAAECggEABWASN0tduDiMUoFrtrrvLHm7aHS7u3uHAm1gLA+dVrGl\nuB4XapkBbkcOELgalzhp89cGKcTMyNzC60ZxY63Q0FrsihUTJDToWf406Gmbnopo\nXhKG69TpQ2aibf56+q9uKP3Lh88hQzByHKf4lBBQLJ0hoBmd5mKQ4lWeKWuFZgcB\nTUQ5tWHQcghH9HAblNyCpnn0LXBppV7MJPntsEo6MnRmFSqQPGkQUBrt6zX6/Kf5\n33Iof2Lbe+AI2xmj3AXurGHGJ4IQpmrEZ5FIxV/TAGZmelL/4SPcT17RcPoge+Ie\nE7MDT8HBldT0TtSVhc8FYnZFh8dTBgu6z9Wv/T/2KQKBgQDUNWNZ/QyZTq1r+chU\nHjkY4LRW+LUJw1DxCy6FLwIgllex21dWK48QGloggqC/GUJmaYDQSax3GE5i2E0E\nE8PyoFyrxK8FJhL2Uk1PUBDVD5xO+U14uqSARpP9AkyR1nscnbkFnPbU6w1kdQU1\nC6anQG1ZQDWJ0MSjq5E8JJtGCQKBgQC7Ahphi8HnliS3wY66FA+537m6uskZBChP\nTvZOsAYdfY4YWdWTOCj9jFyg1EycyMOktiDgUxg7g+jMloG7bx/rYd6xW8pizJC/\npovERy0sc37gb2h2FPjer1TLISQmtQf2RJwDA3KxG/1+nmn9B6ANQx0DzhU95eLC\nDeXh8T8UiwKBgQCtKVuHBOyQ9RiicVK9AWSKHmJKTew8qTqVVxCA8VkFCmlI4rkj\nwaud8kL1IGLXTV9XfmP0kwm+rQDZu7Mszowooh68s2Q2CVmT0pjvTWBO28wqzVgg\nWfz+B5me7Y9ZufD/6twd7nWkTKHDBZJYNMeq1vHj0HdfnBG5lLiQoTZrMQKBgC12\nKWulShI+kdaKG2RpFBmfpcsbNV/7fsEo9P/UEuiAaVbKH/2WHYDl6m6+rZE/zS/x\nhrSB/tYZDzMNM6SZMy1JsZV0NxMln9q3ZirlErpHqYRuEPsDxix8eySWfe9a+wCH\nVVX2NJ+RqmJpqGJ2xBX1RsxyAP/3LtT2A/iVaTxZAoGAelA4DL7XmFFkOxajptD6\nZ2bZuYw7irUBigVmjEmBLjkyx6WXCL7+gZrqhDfE8+uNzLXsPvl/6hnk/4zxUEgx\n6yKpf5328Elx0aYJkBonrLvtLXQ+lvaNgLCC0MRuajodLNhs0Nf/GxWfcYRwRVbP\ns3qpEYKWbx5d3rCxb81uGa8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "sub-229@oliver-brodersen.iam.gserviceaccount.com",
+  "client_id": "108554129153693867046",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sub-229%40oliver-brodersen.iam.gserviceaccount.com"
+}

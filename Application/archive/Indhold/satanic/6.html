@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Greetings from satan</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-87006229-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <style>
+        #text{
+            width: 30em;
+            background-color: #b3eca0;
+            font-family: 'Comic Neue';
+            padding: 1em;
+            margin-top: 9em;
+            position: relative;
+            border-radius: 1em 1em 0 0;
+            box-shadow: 0 -1em 0 0 #82cd7c;
+        }
+        #lommeregnerOutput{
+            font-family: 'Comic Neue';
+            font-size: 4em;
+            text-align: right;
+            color: black;
+            padding: .3em;
+            background-color: white;
+            width: auto;
+            margin-bottom: .4em;
+
+        }
+        .numLom, .action{
+            width: 1.7em;
+            height: 1.7em;
+            margin: 0.05em;
+            font-family: 'Comic Neue';
+            font-size: 4em;
+            background-color: white;
+            border: none;
+            border-radius: 10%;
+            box-shadow: 0 .2em 0 0 #82cd7c;
+            cursor: pointer;
+            transition: all ease .1s;
+            margin-bottom: .2em;
+        }
+        .action:focus{
+            border:.1em solid black;
+        }
+        .numLom{
+            border-radius: 100%;
+        }
+    </style>
+    <h1>Great, no bad news this time</h1>
+    <h2>Don't worry, i do have your number. However, i want to know how clever you are. So i want you to calculate your number only using single didgets. Good luck</h2>
+    <div id="text">
+        <div id="lommeregnerOutput">0</div>
+        <button class="numLom" onclick="calc(1);">1</button>
+        <button class="numLom" onclick="calc(2);">2</button>
+        <button class="numLom" onclick="calc(3);">3</button>
+        <button class="action" onclick="action = 'add'" id="add">+</button>
+        <button class="numLom" onclick="calc(4);">4</button>
+        <button class="numLom" onclick="calc(5);">5</button>
+        <button class="numLom" onclick="calc(6);">6</button>
+        <button class="action" onclick="action = 'sub'" id="sub">-</button>
+        <button class="numLom" onclick="calc(7);">7</button>
+        <button class="numLom" onclick="calc(8);">8</button>
+        <button class="numLom" onclick="calc(9);">9</button>
+        <button class="action" onclick="action = 'mul'" id="mul">*</button>
+        <button class="action" style="font-size:2em; width:3.7em; height:3.7em;" onclick="action = 'mul'; calc(0); action = 'add';">Reset</button>
+        <button class="numLom" onclick="calc(0);">0</button>
+        <button class="action" style="font-size:2em; width:3.4em; height:3.4em;" onclick="window.location = '7.html';">Submit</button>
+        <button class="action" onclick="action = 'div'"  id="div">/</button>
+    </div>
+    <script>
+        var value = 0;
+        var currentNumber;
+        var action = "add";
+        function calc(number) {
+            if (action !== "") {
+
+                if (action == "add") {
+
+                    value += number;
+                }
+                else if (action == "sub") {
+                    value -= number;
+                }
+                else if (action == "mul") {
+                    value *= number;
+                }
+                else if (action == "div") {
+                    value /= number;
+                }
+                document.getElementById("lommeregnerOutput").innerHTML = value;
+                action = "";
+            }
+        }
+    </script>
+</body>
+</html>

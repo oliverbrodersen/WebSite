@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Tove Sand Personlig træning</title>
+    <link rel="stylesheet" type="text/css" href="scripts/style.css">
+    <link rel="shortcut icon" href="assets/icon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="scripts/script.js"></script>
+    <script>
+        //Menu reveal
+        var h = $(window).height() * 0.8,
+            h2 = ($(window).height() * 1.35) - $(window).height(),
+            h3 = ($(window).height() * 1.95) - $(window).height();
+        $(document).ready(function () {
+            if ($(window).width() <= 980) {
+                document.getElementById('about1').style.animationPlayState = 'running';
+                document.getElementById('cardHolder').style.animationPlayState = 'running';
+                document.getElementById('about2').style.animationPlayState = 'running';
+                document.getElementById('about1').style.WebkitAnimationPlayState = 'running';
+                document.getElementById('cardHolder').style.WebkitAnimationPlayState = 'running';
+                document.getElementById('about2').style.WebkitAnimationPlayState = 'running';
+            }
+            document.getElementById("copyright").innerHTML = "&copy;" + (new Date).getFullYear() + " <i>tovesand.dk</i> &#09; ALL RIGHTS RESERVED";
+            $(window).scroll(function () {
+                    if ($(window).scrollTop() > h) {
+                        //When it is scrolled over
+                        $("div.menuCont").addClass("scroll");
+                        $("body").get(0).style.setProperty("--menu-color", "black");
+                    }
+                    else {
+                        $("div.menuCont").removeClass("scroll");
+                        $("body").get(0).style.setProperty("--menu-color", "white");
+                    }
+                    if ($(window).scrollTop() > 1) {
+                        document.getElementById('about1').style.animationPlayState = 'running';
+                        document.getElementById('about1').style.WebkitAnimationPlayState = 'running';
+                    }
+                    if ($(window).scrollTop() > h2) {
+                        document.getElementById('cardHolder').style.animationPlayState = 'running';
+                        document.getElementById('cardHolder').style.WebkitAnimationPlayState = 'running';
+                    }
+                    if ($(window).scrollTop() > h3) {
+                        document.getElementById('about2').style.animationPlayState = 'running';
+                        document.getElementById('about2').style.WebkitAnimationPlayState = 'running';
+                    }
+            });
+        });
+    </script>
+</head>
+<body>
+	<!-- Load Facebook SDK for JavaScript -->
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = 'https://connect.facebook.net/da_DK/sdk.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+	<!-- Your customer chat code -->
+	<div class="fb-customerchat"
+		 page_id="988445947869271"
+		 theme_color="#508E97"
+		 logged_in_greeting="Hej! Har du spørgsmål eller andet kan du skrive til mig her :) "
+		 logged_out_greeting="Hej! Har du spørgsmål eller andet kan du skrive til mig her :) ">
+	</div>
+    <div id="formHolder"></div>
+    <header>
+        <h1>Personlig Træner</h1>
+        <h1 class="thick">Tove Sand</h1>
+        <img id="cFoto" src="assets/Tove.png"/>
+        <div class="menuCont">
+            <ul id="menu" class="hm">
+                <a href="Om.html"><li>Om mig</li></a>
+                <a href="Service.html"><li>Service</li></a>
+                <a href="Priser.html"><li>Priser</li></a>
+                <a href="Blog.html"><li>Blog</li></a>
+                <a href="Kontakt.html"><li>Kontakt</li></a>
+            </ul>
+        </div>
+    </header>
+    <div id="about1">
+        <img id="kettleOne" src="assets/kettle2.png"/>
+        <h3 class="a1" style="position:absolute; top: 30px;">Få hjælp til at nå dine mål og opnå en flot sund og stærk krop</h3>
+        <div class="more a1b noselect" style="bottom:13%;padding: 20px 20px" onclick="window.location='./Service.html';">Læs mere om hvad jeg kan gøre for dig</div>
+    </div>
+    <h2 style="margin-top: 1em;">Jeg tilbyder:</h2>
+    <div id="cardHolder">
+        <card>
+            <h3>Mental træning</h3>
+            <svg version="1.1" id="cardImg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <g>
+                <g>
+                <path d="M396.8,236.586h-93.175l-22.673-68.053c-1.775-5.325-6.929-9.523-12.424-8.747c-5.623,0.128-10.496,3.874-12.023,9.276
+			l-37.35,130.697l-40.252-181.146c-1.229-5.478-5.871-9.523-11.477-9.975c-5.572-0.375-10.829,2.773-12.902,7.996l-48,119.953H12.8
+			c-7.074,0-12.8,5.726-12.8,12.8c0,7.074,5.726,12.8,12.8,12.8h102.4c5.222,0.008,9.95-3.174,11.878-8.047l35.823-89.523
+			l42.197,189.952c1.271,5.726,6.272,9.847,12.126,10.027c0.128,0,0.247,0,0.375,0c5.7,0,10.726-3.772,12.297-9.276l39.851-139.426
+			l12.501,37.547c1.749,5.222,6.647,8.747,12.151,8.747h102.4c7.074,0,12.8-5.726,12.8-12.8
+			C409.6,242.311,403.874,236.586,396.8,236.586z" />
+	</g>
+</g>
+<g>
+                <g>
+                <path d="M467.012,64.374C437.018,34.38,397.705,19.387,358.4,19.387c-36.779,0-73.259,13.662-102.4,39.919
+			c-29.15-26.257-65.621-39.919-102.4-39.919c-39.313,0-78.618,14.993-108.612,44.988C5.214,104.157-7.595,160.187,5.385,211.011
+			h26.624c-13.653-43.972-3.678-93.773,31.078-128.529c24.175-24.175,56.32-37.487,90.513-37.487
+			c31.206,0,60.399,11.563,83.695,31.889L256,94.369l18.714-17.493c23.296-20.318,52.489-31.889,83.686-31.889
+			c34.193,0,66.33,13.312,90.513,37.487c49.911,49.903,49.903,131.115,0,181.018L256,456.404L87.407,287.811H51.2l204.8,204.8
+			l211.012-211.012C526.993,221.61,526.993,124.364,467.012,64.374z" />
+	</g>
+</g>
+</svg>
+
+        </card>
+        <card>
+            <h3>Kostvejledning</h3>
+            <svg version="1.1" id="cardImg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 418.478 418.478" style="enable-background:new 0 0 418.478 418.478;" xml:space="preserve">
+<g>
+            <path d="M191.307,296.882c0.371,3.881,3.636,6.787,7.457,6.787c0.238,0,0.48-0.011,0.722-0.035
+		c4.124-0.394,7.146-4.056,6.752-8.179l-22.157-231.87h132.075l-15.295,160.059c-0.394,4.124,2.629,7.785,6.752,8.179
+		c4.131,0.397,7.785-2.629,8.179-6.752l20.074-210.075c0.201-2.104-0.495-4.194-1.916-5.758c-1.421-1.563-3.437-2.455-5.55-2.455
+		H171.837c-2.113,0-4.128,0.892-5.55,2.455c-1.421,1.564-2.117,3.655-1.916,5.758L191.307,296.882z M320.152,21.783l-2.561,26.803
+		H182.649l-2.561-26.803H320.152z" />
+            <path d="M404.015,258.914c-9.932-14.636-23.426-22.696-37.999-22.696c-9.765,0-19.089,3.68-27.135,10.469v-15.146
+		c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v15.146c-8.047-6.789-17.371-10.469-27.136-10.469
+		c-14.643,0-28.038,7.066-37.717,19.896c-9.427,12.496-14.619,29.854-14.619,48.875c0,3.295,0.311,6.892,0.923,10.688
+		c0.66,4.089,4.508,6.863,8.6,6.209c4.089-0.66,6.869-4.51,6.209-8.6c-0.486-3.008-0.732-5.799-0.732-8.297
+		c0-31.157,15.702-53.771,37.335-53.771c10.642,0,20.883,7.359,28.098,20.191c1.328,2.362,3.828,3.824,6.538,3.824
+		s5.209-1.462,6.538-3.824c7.214-12.832,17.456-20.191,28.097-20.191c20.307,0,37.462,26.908,37.462,58.759
+		c0,11.374-5.108,24.856-15.181,40.071c-3.119,4.71-6.82,9.021-11,12.815c-3.068,2.783-3.298,7.526-0.515,10.594
+		c1.48,1.632,3.514,2.46,5.557,2.46c1.797,0,3.601-0.643,5.037-1.946c5.104-4.631,9.622-9.894,13.428-15.644
+		c11.728-17.713,17.674-33.981,17.674-48.352C418.478,290.793,413.341,272.658,404.015,258.914z" />
+            <path d="M351.004,354.458l-174.153-42.139c-14.023-3.393-28.854-0.604-40.688,7.652c-8.388,5.853-14.703,14.073-18.268,23.466
+		l-35.979-30.412c-3.165-2.674-7.897-2.277-10.57,0.886c-2.674,3.164-2.277,7.896,0.886,10.57L98.5,346.684L8.2,338.227
+		c-4.125-0.387-7.78,2.644-8.167,6.768c-0.386,4.124,2.644,7.78,6.768,8.167l83.343,7.805l-51.797,20.879
+		c-3.841,1.548-5.701,5.918-4.152,9.76c1.178,2.923,3.989,4.698,6.958,4.698c0.933,0,1.883-0.175,2.801-0.546l71.005-28.621
+		c1.199,10.259,5.519,20.012,12.54,27.831c9.557,10.644,23.205,16.727,37.499,16.727c0.124,0,0.25,0,0.374-0.001l179.174-1.332
+		c14.295-0.106,26.312-10.895,27.953-25.097C374.14,371.065,364.899,357.82,351.004,354.458z M357.599,383.545
+		c-0.773,6.688-6.432,11.768-13.163,11.818l-179.174,1.332c-10.135,0.084-19.83-4.207-26.6-11.747
+		c-6.771-7.541-9.987-17.64-8.824-27.708c1.163-10.067,6.596-19.167,14.908-24.966c5.993-4.181,13.08-6.366,20.261-6.366
+		c2.777,0,5.569,0.327,8.317,0.992l174.153,42.139C354.02,370.62,358.371,376.858,357.599,383.545z" />
+            <path d="M225.963,95.278c-11.579,0-20.999,9.42-20.999,21s9.42,20.999,20.999,20.999s21-9.42,21-20.999
+		S237.542,95.278,225.963,95.278z M225.963,122.277c-3.308,0-5.999-2.691-5.999-5.999s2.691-6,5.999-6s6,2.691,6,6
+		S229.271,122.277,225.963,122.277z" />
+            <path d="M261.962,207.774c13.233,0,23.999-10.766,23.999-23.999c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5
+		c0,4.962-4.037,8.999-8.999,8.999c-4.962,0-9-4.037-9-8.999c0-4.962,4.037-9,9-9c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5
+		c-13.233,0-24,10.766-24,24C237.962,197.007,248.728,207.774,261.962,207.774z" />
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+        </card>
+        <card>
+            <h3>Motivation</h3>
+            <svg version="1.1" id="cardImg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 512.004 512.004" style="enable-background:new 0 0 512.004 512.004;" xml:space="preserve">
+<g>
+            <g>
+            <path d="M338.387,135.384v-21.24h-53.099v-10.62h-73.841v10.62h-56.417v50.444h-28.541v125.025
+			c0,33.469,22.873,61.688,53.805,69.871v152.519h151.415V355.75c25.403-11.216,43.184-36.633,43.184-66.139v-33.926h10.62V135.384
+			H338.387z M285.287,128.913h38.33v6.471v105.534h-38.33V128.913z M226.215,118.293h44.303v122.624h-44.303v-11.78h36.506v-64.549
+			h-36.506V118.293z M169.798,128.913h41.648v35.675h-41.648V128.913z M360.123,289.612c0,31.708-25.796,57.503-57.503,57.503
+			v14.769c4.901,0,9.689-0.495,14.318-1.43v136.779H195.061V361.79c1.225,0.062,2.458,0.094,3.698,0.094h8.788v-7.385v-0.001v-7.384
+			h-0.913h-7.875c-31.707,0-57.503-25.796-57.503-57.503V179.357h13.772h71.187h21.736v35.011h-59.073v41.91
+			c-2.505-0.181-4.732-0.292-6.591-0.356l-0.508,14.76c4.003,0.138,9.421,0.475,15.559,1.25c9.974,1.26,21.856,3.682,32.686,8.312
+			c20.278,8.667,30.135,21.887,30.135,40.417h14.769c0-11.984-3.13-21.748-8.265-29.717c15.711-5.421,32.435-6.834,42.007-7.163
+			l-0.508-14.76c-11.584,0.399-32.761,2.273-51.919,10.068c-14.842-12.749-35.816-18.528-52.596-21.136v-28.816h7.798v26.549h59.072
+			h14.769h38.33h14.769h21.736V289.612z M370.743,240.918h-32.356v-90.765h32.356V240.918z" />
+	</g>
+</g>
+<g>
+            <g>
+            <rect x="275.141" y="347.118" width="15.051" height="14.769" />
+	</g>
+</g>
+<g>
+            <g>
+            <rect x="154.89" y="255.854" width="15.471" height="14.769" />
+	</g>
+</g>
+<g>
+            <g>
+            <rect x="247.956" y="398.604" width="14.769" height="66.881" />
+	</g>
+</g>
+<g>
+            <g>
+            <rect x="248.615" y="0.002" width="14.769" height="58.964" />
+	</g>
+</g>
+<g>
+            <g>
+            <rect x="451.092" y="244.718" width="60.912" height="14.769" />
+	</g>
+</g>
+<g>
+            <g>
+            <rect y="244.718" width="58.722" height="14.769" />
+	</g>
+</g>
+<g>
+            <g>
+            <rect x="384.36" y="87.12" transform="matrix(0.7071 -0.7071 0.7071 0.7071 54.3169 320.1407)" width="58.486" height="14.768" />
+	</g>
+</g>
+<g>
+            <g>
+		
+            <rect x="69.188" y="402.39" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -260.9605 189.5341)" width="58.239" height="14.768" />
+	</g>
+</g>
+<g>
+            <g>
+		
+            <rect x="405.78" y="379.428" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -168.3854 412.0237)" width="14.768" height="59.687" />
+	</g>
+</g>
+<g>
+            <g>
+            <rect x="90.509" y="65.489" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -37.802 96.7554)" width="14.768" height="57.04" />
+	</g>
+</g>
+<g>
+            <g>
+            <path d="M349.025,17.932c-3.253,8.261-7.07,16.634-10.762,24.732c-4.347,9.537-8.842,19.398-12.644,29.514l13.825,5.196
+			c3.626-9.643,8.015-19.272,12.259-28.583c3.77-8.271,7.669-16.824,11.064-25.445L349.025,17.932z" />
+	</g>
+</g>
+<g>
+            <g>
+            <path d="M463.638,333.665c-9.815-4.266-19.964-8.678-30.114-12.984l-5.768,13.596c10.088,4.28,20.206,8.679,29.992,12.934
+			c8.741,3.801,17.781,7.731,26.823,11.587l5.794-13.586C481.371,341.376,472.355,337.457,463.638,333.665z" />
+	</g>
+</g>
+<g>
+            <g>
+            <path d="M53.654,156.711c-8.581-3.61-17.455-7.342-26.088-11.233l-6.069,13.465c8.804,3.968,17.765,7.737,26.432,11.382
+			c9.568,4.025,18.603,7.827,27.445,11.871l6.144-13.431C72.468,164.625,62.903,160.602,53.654,156.711z" />
+	</g>
+</g>
+<g>
+            <g>
+            <path d="M487.591,152.207c-6.714,2.66-13.254,5.286-19.749,7.895c-12.041,4.834-23.413,9.4-35.659,14.107l5.298,13.786
+			c12.348-4.746,24.303-9.545,35.864-14.187c6.475-2.599,12.994-5.217,19.686-7.869L487.591,152.207z" />
+	</g>
+</g>
+<g>
+            <g>
+            <path d="M73.082,316.796c-8.718,3.155-17.055,6.67-25.119,10.07c-9.205,3.88-18.722,7.894-28.663,11.291l4.776,13.976
+			c10.428-3.564,20.187-7.679,29.625-11.658c7.889-3.326,16.046-6.766,24.405-9.79L73.082,316.796z" />
+	</g>
+</g>
+<g>
+            <g>
+            <path d="M169.951,15.408l-13.975,4.777c5.757,16.845,12.485,33.79,21.812,54.944l13.514-5.961
+			C182.151,48.418,175.567,31.838,169.951,15.408z" />
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+        </card>
+        <div class="more noselect" onclick="window.location='./Service.html';">Læs mere</div>
+    </div>
+
+    <div id="about2" style="margin-top: 8em;">
+        <h2 >Hvem er jeg</h2>
+        <div class="row">
+            <img id="aboutFoto" src="assets/profil2.jpg" />
+            <h5 id="navnTS" style="width: 100%; text-align: center; position: absolute; bottom: 12%; font-size: 1.8em;font-weight: 100;">Tove Sand</h5>
+        </div>
+        <div class="row" style="margin-left:5%;">
+            <h4>Personligt</h4>
+            <h5>Mor til to</h5>
+            <h5>Født i 1967</h5>
+        </div>
+        <div class="row">
+            <h4>Profecionelt</h4>
+            <h5>Fitnessinstruktør uddannet (EQF level 3)</h5>
+            <h5>Undervist i Spinning, Bootcamp, løb og cirkeltræning.</h5>
+        </div>
+        <div class="more noselect" style="bottom:-25%;" onclick="window.location='./Om.html';">Læs mere</div>
+    </div>
+    <div class="footer">
+        <h5 style="text-align:center;cursor:pointer;"><a style="margin-left:-20px; text-decoration: none;color:#A0A0A0;" href="main.html">Home</a><a style="margin-left:20px;" onclick="$('html, body').animate({scrollTop: 0 }, 600);">Top</a></h5>
+        <div id="infoCont">
+            <h6>E-mail: <a class="cInfo" href="mailto:tovesandbrodersen@gmail.com">tovesandbrodersen@gmail.com</a></h6>
+            <h6>Nummer: <a class="cInfo" href="tel:+4531484988">31 48 49 88</a></h6>
+        </div>
+        <div id="socialCont">
+            <a href="https://www.facebook.com/personligtraenertovesand" target="_blank"  title="Facebook: @personligtraenertovesand">
+                <svg class="socialFoot" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10240 10240" preserveAspectRatio="xMidYMid meet">
+                    <g id="layer1" stroke="none">
+                        <path d="M400 10226 c-88 -20 -159 -63 -241 -145 -84 -84 -125 -154 -145 -246 -20 -89 -20 -9341 0 -9430 20 -92 61 -162 145 -246 84 -84 154 -125 246 -145 89 -20 9341 -20 9430 0 92 20 162 61 246 145 84 84 125 154 145 246 11 49 13 926 13 4715 0 5038 4 4717 -54 4830 -36 71 -164 199 -235 235 -109 56 -65 54 -1533 55 l-1357 0 2 -1987 3 -1988 657 -3 658 -2 5 -23 c2 -12 45 -339 95 -727 49 -388 92 -720 95 -737 l6 -33 -758 -2 -758 -3 -3 -588 c-2 -550 -1 -594 17 -684 51 -246 180 -384 427 -455 77 -21 95 -22 607 -26 l527 -3 0 -678 0 -678 -47 -6 c-347 -44 -1222 -63 -1458 -32 -864 114 -1427 625 -1595 1449 -48 235 -52 307 -59 1021 l-6 680 -667 3 -668 2 0 760 0 760 668 2 667 3 3 1988 2 1987 -2512 -1 c-1948 -1 -2525 -4 -2568 -13z" />
+                    </g>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/tovesand2/" target="_blank" title="Instagram: @tovesand2" >
+                <svg class="socialFoot" version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5120 5120" preserveAspectRatio="xMidYMid meet">
+                    <g id="layer1" stroke="none">
+                        <path d="M1814 4850 c-132 -4 -271 -10 -310 -14 -375 -38 -627 -148 -850 -370 -242 -243 -343 -497 -376 -946 -16 -226 -16 -1694 0 -1920 33 -450 133 -703 376 -946 243 -242 497 -343 946 -376 226 -16 1694 -16 1920 0 450 33 703 133 946 376 242 243 343 497 376 946 16 226 16 1694 0 1920 -33 449 -134 703 -376 946 -239 238 -498 343 -922 374 -179 13 -1417 21 -1730 10z m1681 -451 c83 -5 191 -18 240 -28 349 -72 564 -287 636 -636 34 -164 42 -379 42 -1175 0 -796 -8 -1011 -42 -1175 -72 -349 -287 -564 -636 -636 -164 -34 -379 -42 -1175 -42 -796 0 -1011 8 -1175 42 -349 72 -564 287 -636 636 -34 164 -42 379 -42 1175 0 982 11 1143 92 1343 114 285 331 436 701 488 193 27 1618 33 1995 8z" />
+                        <path d="M2465 3744 c-211 -29 -296 -54 -439 -127 -327 -167 -556 -467 -632 -829 -23 -111 -24 -332 -1 -449 47 -240 153 -436 332 -614 176 -177 366 -280 607 -331 113 -24 343 -24 456 0 359 76 660 303 826 624 95 184 130 332 129 547 0 209 -35 354 -129 537 -166 320 -479 557 -826 623 -81 15 -270 27 -323 19z m245 -456 c252 -47 472 -241 554 -489 90 -270 21 -565 -179 -764 -290 -291 -760 -291 -1050 0 -291 290 -291 760 0 1050 178 179 419 251 675 203z" />
+                        <path d="M3687 1616 c-94 -35 -164 -110 -188 -201 -14 -52 -6 -152 15 -194 76 -146 247 -207 388 -138 185 91 221 333 69 470 -22 20 -55 44 -73 53 -44 23 -161 29 -211 10z" />
+                    </g>
+                </svg>
+            </a>
+        </div>
+        <h5 style="text-align:center;" id="copyright">©2017 tovesand.dk ALL RIGHTS RESERVED</h5>
+    </div>
+
+</body>
+</html>

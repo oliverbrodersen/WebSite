@@ -1,0 +1,118 @@
+﻿@font-face {
+  font-family: 'Comic Neue';
+  src: url('fonts/ComicNeue-Light.eot');
+  src: url('fonts/ComicNeue-Light.eot?#iefix') format('embedded-opentype'),
+       url('fonts/ComicNeue-Light.woff2') format('woff2'),
+       url('fonts/ComicNeue-Light.woff') format('woff'),
+       url('fonts/ComicNeue-Light.ttf')  format('truetype');
+  font-weight: 300;
+}
+        body{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: #c8ffc1;
+        }
+        h1, h2, h3, h5{
+            font-family: 'Comic Neue';
+            width: 100%;
+            text-align: center;
+            font-size: 6em;
+            margin-top: 1em;
+            color: white;
+            margin-bottom: 0;
+        }
+        h2, h3{
+            margin-top: 0;
+            font-size: 3em;
+            float: left;
+        }
+        h5{
+            color: green;
+        }
+        h3{
+            width: auto;
+            margin-bottom: 1em;
+        }
+        .desimal{
+            width: 8em;
+            margin: 1em;
+            float: left;
+        }
+        input[type="checkbox"]{
+            background-color: white;
+            zoom: 2;
+            margin: 0;
+        }
+       #number{
+            padding: .2em;
+            font-size: 4em;
+            font-family: 'Comic Neue';
+            background-color: white;
+            font-style: normal;
+            width: 4.7em;
+            border: none;
+            float: left;
+        }
+       #controls{
+           margin-top: 5.3em;
+           margin-left: .2em;
+           width: 4em;
+           position: relative;
+           float: left;
+       }
+       #up, #down{
+           background-color:#b3eca0;
+           color: white;
+           border: none;
+            width: inherit;
+            padding-bottom: .45em;
+            padding-top: .65em;
+            font-size: 1.2em;
+            font-family: 'Comic Neue';
+            position: relative;
+            border: 0 solid #82cd7c;
+            border-bottom-width: .2em;
+             cursor: pointer;
+       }
+       #up{
+           margin-bottom: .2em;
+       }
+        #numberContainer{
+            width: 25em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .containter{
+            width: 80em; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #text{
+            width: 43em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .Submit{
+            position: relative;
+            width: 5em;
+            font-size: 3.5em;
+            text-align: center;
+            margin-left: 3.45em;
+            margin-right: auto;
+            color: white;
+            background-color: #b3eca0;
+            border: 0 solid #82cd7c;
+            border-bottom-width: .1em;
+            border-radius: .1em;
+            font-family: 'Comic Neue';
+            padding: .2em;
+            transition: all ease .1s;
+             cursor: pointer;
+
+        }
+        #Submit:hover{
+            border: 0 solid #82cd7c;
+            margin-top: .1em;
+        }

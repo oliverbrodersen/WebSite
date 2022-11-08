@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Greetings from satan</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-87006229-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <style>
+        #wrapper {
+            margin-top: 10em;
+            margin-left: 3em;
+            width:125em; 
+            height: 45em;
+            display: block;
+        }
+        ul{
+            list-style-type: none;
+        }
+        li {
+            position: absolute;
+            font-family: 'Comic Neue';
+            width: 2.5em;
+            height: 2.5em;    
+            font-size: 2em;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            text-decoration: none;
+            background-color:white;
+            line-height: 2.5em;
+            text-align:center;
+            border-top: 0.05em solid #c8ffc1;
+            border-bottom: 0.15em solid #82cd7c;
+            cursor:pointer; 
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Chrome/Safari/Opera */
+            -khtml-user-select: none; /* Konqueror */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+            }
+        #yes, #no{
+            font-family: 'Comic Neue';
+            font-size: 1.5em;
+                
+            width: 5em;
+            float: left;
+            color: white;
+            background-color: #b3eca0;
+            border: 0 solid #82cd7c;
+            border-bottom-width: .1em;
+            border-radius: .1em;
+            font-family: 'Comic Neue';
+            padding: .2em;
+            margin-left: .2em;  
+            transition: all ease .1s;
+             cursor: pointer;
+
+        }
+        #yes:hover, #no:hover{
+            border: 0 solid #82cd7c;
+            margin-top: .1em;
+        }
+        #butons{
+            width: 16em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h5 {
+            font-family: 'Comic Neue';
+            font-size: 4em;
+            width: 10em;
+            height: 1.6em;
+            color: black;
+            padding-top: .3em;
+            background-color: white;
+            margin: .05em;
+            float: left;
+        }
+        #text{
+            margin-top: -20em;
+        }
+    </style>
+    <h1>Listen, LISTEN!</h1>
+    <h2>I had your number i swear, but the numbers won't cooperate any more. Please help!</h2>
+
+    <ul id="wrapper">
+        <li id="1" onclick="document.getElementById('a' + current).innerHTML = this.innerHTML; current++; balls(4); antallet++">1</li>
+        <li id="2" onclick="document.getElementById('a' + current).innerHTML = this.innerHTML; current++; balls(4); antallet++">2</li>
+        <li id="3" onclick="document.getElementById('a' + current).innerHTML = this.innerHTML; current++; balls(4); antallet++">3</li>
+        <li id="4" onclick="document.getElementById('a' + current).innerHTML = this.innerHTML; current++; balls(4); antallet++" >4</li>
+        <li id="5" onclick="document.getElementById('a' + current).innerHTML = this.innerHTML; current++; balls(4); antallet++" >5</li>
+        <li id="6" onclick="document.getElementById('a' + current).innerHTML = this.innerHTML; current++; balls(4); antallet++" >6</li>
+        <li id="7" onclick="document.getElementById('a' + current).innerHTML = this.innerHTML; current++; balls(4); antallet++" >7</li>
+        <li id="8" onclick="document.getElementById('a' + current).innerHTML = this.innerHTML; current++; balls(4); antallet++" >8</li>
+        <li id="9" onclick="document.getElementById('a' + current).innerHTML = this.innerHTML; current++; balls(4); antallet++" >9</li>
+        <li id="0" onclick="document.getElementById('a' + current).innerHTML = this.innerHTML; current++; balls(4); antallet++" >0</li>
+    </ul>
+    <div id="text">
+        <h5>
+        <a id="a1">_</a>
+        <a id="a2">_</a>
+        <a id="a3">_</a>
+        <a id="a4">_</a>
+        <a id="a5">_</a>
+        <a id="a6">_</a>
+        <a id="a7">_</a>
+        <a id="a8">_</a>
+        </h5>
+        <div id="butons">
+            <button id="no" onclick="reset();" >Reset</button>
+            <button id="yes" onclick="window.location = '6.html';">Submit</button>
+        </div>
+    </div>
+        <script>
+            var current = 1;
+            function reset() {
+                document.getElementById("a1").innerHTML = "_";
+                document.getElementById("a2").innerHTML = "_";
+                document.getElementById("a3").innerHTML = "_";
+                document.getElementById("a4").innerHTML = "_";
+                document.getElementById("a5").innerHTML = "_";
+                document.getElementById("a6").innerHTML = "_";
+                document.getElementById("a7").innerHTML = "_";
+                document.getElementById("a8").innerHTML = "_";
+                current = 1;
+                antallet = 2;
+                balls(4);
+            }
+        </script>
+        <script>
+            var antallet = 2;
+            function balls(antal) {
+                $.fn.bounce = function (options) {
+
+                    var settings = $.extend({
+                        speed: antal
+                    }, options);
+
+                    return $(this).each(function () {
+
+                        var $this = $(this),
+                        $parent = $this.parent(),
+                        height = $parent.height(),
+                        width = $parent.width(),
+                        pixel = $("number").css('font-size'),
+                        top = Math.floor(Math.random() * (height / 2)) + height / 4,
+                        left = Math.floor(Math.random() * (width / 2)) + width / 4,
+                        vectorX = settings.speed * (Math.random() > 0.5 ? 1 : -1),
+                        vectorY = settings.speed * (Math.random() > 0.5 ? 1 : -1);
+
+                        // place initialy in a random location
+                        $this.css({
+                            'top': top,
+                            'left': left
+                        }).data('vector', {
+                            'x': vectorX,
+                            'y': vectorY
+                        });
+
+                        var move = function ($e) {
+
+                            var offset = $e.offset(),
+                            width = $e.width(),
+                            height = $e.height(),
+                            vector = $e.data('vector'),
+                            $parent = $e.parent();
+
+                            if (offset.left <= 60 && vector.x < 60) {
+                                vector.x = -1 * vector.x;
+                            }
+                            if ((offset.left + width) >= $parent.width()) {
+                                vector.x = -1 * vector.x;
+                            }
+                            if (offset.top <= 260 && vector.y < 260) {
+                                vector.y = -1 * vector.y;
+                            }
+                            if ((offset.top + height) >= $parent.height()) {
+                                vector.y = -1 * vector.y;
+                            }
+
+                            $e.css({
+                                'top': offset.top + vector.y + 'px',
+                                'left': offset.left + vector.x + 'px'
+                            }).data('vector', {
+                                'x': vector.x,
+                                'y': vector.y
+                            });
+
+                            setTimeout(function () {
+                                move($e);
+                            }, 50);
+
+                        };
+
+                        move($this);
+                    });
+
+                };
+
+                $(function () {
+                    $('#wrapper li').bounce({
+                        'speed': antal
+                    });
+                })
+            } balls(antallet);
+
+        </script>
+</body>
+</html>

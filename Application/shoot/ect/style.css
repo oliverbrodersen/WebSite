@@ -1,0 +1,232 @@
+﻿
+
+body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    cursor: crosshair;
+}
+.shot{
+    height: 10px;
+    width: 10px;
+    background-color: black;
+    position: absolute;
+    top:0;
+    left: 0;
+    border-radius: 100%;
+}
+.enemy{
+    position: absolute;
+    height: 90px;
+    width: 90px;
+    background-color: rgba(255,0,0,.6);
+    border-radius: 100%;
+    border: rgba(255,0,0,.8) solid 5px;
+}
+.enemyLife{
+    height: 20px;
+    background-color: green;
+    width: 100px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    transition: width ease .1s, background-color linear .1s;
+}
+.enemyLife:after{
+    content: " ";
+    width: 110px;
+    height: 24px;
+    position: absolute;
+    top: -2px;
+    left: -5px;
+    border: solid black 1px;
+    z-index: -1;
+    background-color: rgba(0,0,0,.6);
+}
+h1{
+    position: absolute;
+    top: 0;
+    right: 30.3%;
+    font-family: Arial;
+    color: black;
+    font-size: 2vw;
+    text-align: right;
+    font-family: 'Alegreya', serif;
+    padding-right: 0vw;
+    border-right: dashed .1vw #2E5257;
+    box-shadow: .5vw 0 0 0 #72C9D7;
+    padding-right: .5vw;
+    background-color: #72C9D7;
+}
+h1::before{
+    content:"Bullets: ";
+    position: absolute;
+    text-align: left;
+    width: 7vw;
+    left: -8vw;
+    padding-left: 1vw;
+    background-color: #72C9D7;
+}
+h2{
+    position: absolute;
+    top: 3vw;
+    right: 30.3%;
+    font-family: Arial;
+    color: black;
+    font-size: 2vw;
+    text-align: right;
+    font-family: 'Alegreya', serif;
+    border-right: dashed .1vw #2E5257;
+    box-shadow: .5vw 0 0 0 #72C9D7;
+    padding-right: .5vw;
+    background-color: #72C9D7;
+}
+h2::before{
+    content:"Bank: ";
+    position: absolute;
+    text-align: right;
+    width: 5vw;
+    left: -6.4vw;
+    padding-right: .4vw;
+    padding-left: 1vw;
+    background-color: #72C9D7;
+}
+#player{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    bottom:-50px;
+    border: dashed 5px black;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,.8);
+}
+#life{
+    position: absolute;
+    width: 130px;
+    left: -15px;
+    height: 13px;
+    bottom: 40px;
+    background-color: red;
+}
+#life::before{
+    content: " ";
+    height: 15px;
+    width: 134px;
+    left: -3px;
+    top: 3px;
+    z-index: -100;
+    background-color: rgba(0,0,0,.4);
+    border: solid 1px black;
+}
+#shop{
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #72C9D7;
+    -webkit-box-shadow: inset 0 0 0 .6vw #79D5E4;
+    -moz-box-shadow: inset 0 0 0 .6vw #79D5E4;
+    box-shadow: inset 0 0 0 .6vw #79D5E4;
+    cursor: default;
+}
+#shop::after{
+    content: " ";
+    position: absolute;
+    top: .6vw;
+    bottom: .6vw;
+    right: .6vw;
+    left: .6vw;
+    border: solid .8vw #2E5257;
+    border-left-color: #508E97;
+    border-right-color: #508E97;
+}
+h3{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 5vw;
+    color: white;
+    top: -4vw;
+    font-family: 'Alegreya', serif;
+    z-index: 1;
+}
+h3:after{
+    content: "Shop";
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 5vw;
+    color: white;
+    left: 0;
+    font-family: 'Alegreya', serif;
+      text-shadow:
+       -.2vw -.2vw 0 #72C9D7,  
+        .2vw -.2vw 0 #72C9D7,
+        -.2vw .2vw 0 #72C9D7,
+         .2vw .2vw 0 #72C9D7;
+    z-index: 2;
+}
+h3:before{
+    content: " ";
+    position: absolute;
+    bottom: 1.2vw;
+    left: 20%;
+    right: 20%;
+    border-top: solid .2vw #508E97;
+    z-index: 0;
+}
+#shopArea{
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    top: 20%;
+    height: 80%;
+}
+#shopBut{
+    background-color: #72c9d7;
+    color: #508e97;
+    position: relative;
+    width: 32.85%;
+    margin: 0;
+    font-family: 'Alegreya', serif;
+    padding-top: .5vw;
+    padding-bottom: -5px;
+    font-size: 1.3vw;
+    border: none;
+}
+#shopBut.active{
+    background-color: #79d5e4;
+    color: white;
+    box-shadow: inset 0 0 0 .2vw #79d5e4, inset 0 0 0 .4vw white;
+}
+#shopBut.active::before{
+    content: " ";
+    position: absolute;
+    width: 91.07%;
+    bottom: -0.43vw;
+    left: .21vw;
+    height: .9vw;
+    background-color: #79D5E4;  
+    border: solid .2vw white;
+    border-top: none;
+    border-bottom: none;
+    z-index: 1;
+}
+#shopContent {
+    width: 100%;
+    position: absolute;
+    height: 90%;
+    background-color: #79d5e4;
+    box-shadow: inset 0 0 0 .2vw #79d5e4, inset 0 0 0 .4vw white;
+}
+#autoShoot{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    z-index: -2;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,.05);
+    border: dashed 5px rgba(0,0,0,.4);
+    transform: rotate(180deg);
+}

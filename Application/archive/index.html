@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Oliver Brodersen</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Oliver Brodersen</title>
+    <meta property="og:title" content="Oliver Brodersen">
+    <meta name="description" content="The portfolio of designer and web developåer Oliver Brodersen" />
+    <meta property="og:description" content="The portfolio of designer and web developåer Oliver Brodersen" />
+
+    <meta property="og:site_name" content="Oliver Brodersen" />
+    <meta property="og:url" content="https://oliver-brodersen.com" />
+    <meta property="og:type" content="website" />
+    <meta name="author" content="Oliver Brodersen" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@oliverbrodersen">
+
+    <link rel="icon" type="image/png" href="https://oliver-brodersen.com/img/96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="https://oliver-brodersen.com/img/32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://oliver-brodersen.com/img/16.png" sizes="16x16" />
+    <link rel="apple-touch-icon" href="https://oliver-brodersen.com/img/180.png" sizes="180x180" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/scripts/library.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="assets/scripts/procesbar.js"></script>
+    <script src="assets/scripts/lib.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#libary").draggable({
+                handle: "#headerLib",
+                containment: "parent"
+            }).resizable({
+                handles: "se",
+                containment: "parent"
+            });
+        });
+    </script>
+</head>
+<body id="body" onkeyup="keypress(event)">
+    <div id="bg" class="ui-widget-content">
+        <div id="libary" class="ui-state-active"  onclick="topApp(this);" style="background-color:white;">
+            <div id="headerLib" ondblclick="libMax('libary');">
+                <input type="button" id="back" onclick="backHistory();" value="Back" />
+                <div class="winCont">
+                    <input type="button" class="min" onclick="libTog('libary');" value="*" />
+                    <input type="button" class="max" onclick="libMax('libary');" value="*" />
+                    <input type="button" class="close" onclick="libTog('libary');" value="*" />
+                </div>
+            </div>
+
+            <div id="libSidebar">
+                <div id="infoContainer">
+                    <img id="imgHolder" />
+                    <div id="imgInfo">
+                        <h2 id="nameHolder">File: </h2>
+                        <h2 id="datoHolder">Date: </h2>
+                        <h2 id="katHolder">Catagory: </h2>
+                        <h2 id="besHolder">Descripton: </h2>
+                    </div>
+                </div>
+                <div id="libMenu" class="parent" onclick="folderOpen('lib');">Libary</div>
+                <div id="imgMenu" class="child" onclick="folderOpen('images');">Pictures</div>
+                <div id="webMenu" class="child">Websites</div>
+                <div id="vidMenu" class="child">Videos</div>
+                <div id="obMenu" class="parent">Oliver Brodersen</div>
+                <div id="ebMenu" class="child">About</div>
+                <div id="webMenu" class="child" onclick="window.location.href = 'http://oliver-brodersen.com'">Website</div>
+                <div id="gamesMenu" class="parent">Games</div>
+            </div>
+
+            <div id="libContent">
+
+            </div>
+        </div>
+        <div id="procesbar">
+            <div id="menuIcon" class="icon"></div>
+            <div id="libraryIcon" class="icon open" onclick="libTog('libary');"></div>
+            <div id="imagePrevIcon" class="icon"></div>
+            <div id="codeIcon" class="icon"></div>
+            <div id="gamesIcon" class="icon"></div>
+            <div id="clock">
+                <div id="time"></div>
+                <div id="date"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

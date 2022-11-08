@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Oliver Brodersen - Lidt om mig</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <style>
+        html {
+            width: 100%;
+            height: 100%;
+            clip: auto;
+            position: absolute;
+            overflow: hidden;
+        }
+		#grid{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			background-image: url(grid.png);
+			background-repeat: repeat;
+			background-size: 4px;
+			z-index: -1;
+			pointer-events: none;
+		}
+        body{
+            background-color:black;
+        }
+        .logo{
+            width: 30%;
+            margin-top: 2%;
+            margin-left: 35%;
+            z-index: 700;
+        }
+        
+        .bg, .sol{
+            width: 100%;
+            position: absolute;
+            bottom: -27%;
+            z-index: -8;
+        }
+        .bgg{
+            width:100%;
+            position: absolute;
+            top:0;
+            z-index:-10;
+        }
+        .sol{
+            z-index:-9;
+            -webkit-animation-name: sol;
+            -webkit-animation-duration: 20s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-fill-mode:forwards;
+        }
+        @-webkit-keyframes sol{
+            0% {bottom: -27%;}
+            32% {bottom: 20%;}
+            42% {bottom: 20%;}
+            75% {bottom: 100%}
+            100% {bottom: 100%}
+        }
+        .måne{
+            position: absolute;
+            bottom: -27%;
+            width: 100%;
+            z-index:-9;
+            -webkit-animation-name: måne;
+            -webkit-animation-duration: 20s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-fill-mode:forwards;
+            -webkit-animation-delay: 10s;
+        }
+        @-webkit-keyframes måne{
+            0% {bottom: -27%;}
+            32% {bottom: 20%;}
+            42% {bottom: 20%;}
+            75% {bottom: 100%}
+            100% {bottom: 100%}
+        }
+        .støj{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity:0.5;
+            z-index: -5;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        li{
+            text-decoration: none;
+            float: left;
+            color: white;
+            font-family: AXIS;
+            font-size: 15px;
+            padding-top: 20px;
+            width: 10%;
+            border-top: 1px solid white;
+            margin: 2%;
+            text-align: center;
+            transition: padding-top .05s, border-top .05s;
+            left:0;
+            z-index: 3;
+        }
+        li:hover{
+            padding-top: 10px;
+            border-top: 10px solid white;
+        }
+        ul{
+            list-style-type: none;
+            margin-left: 40%;
+            z-index: -3;
+        }
+        .left{
+            z-index: 1000;
+        }
+        .sym{
+            width: 70%;
+            margin-left: 15%;
+            position: absolute;
+            top: 10%;
+            z-index: -6;
+        }
+        #mig{
+            position: absolute;
+            width: 30%;
+            left: 33%;
+            top: 25%;
+            z-index: -4;
+            -webkit-animation-name: mig;
+            -webkit-animation-duration: 4s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-fill-mode:forwards;
+        }
+        @-webkit-keyframes mig{
+            0%{top: 25%;}
+            50%{top: 35%;}
+            100%{top: 25%;}
+        }
+    </style>
+	<div id="grid"></div>
+	<img class="logo" src="logo.png" />
+    <ul>
+        <li class="men"><a href="byg selv.html"> Byg selv </a></li>
+        <li><a href="fakta.html"> 25 facts </a></li>
+    </ul>
+    <img id="mig" src="mig.png" onmouseover="this.src='mig.gif'" onmouseout="this.src='mig.png'" loop="infinite"/>
+    <img class="bg" src="bg gulv.jpg" />
+    <img class="sol" src="sol.png" />
+    <img class="måne" src="måne.png" />
+    <img class="bgg" src="bg.jpg" />
+    <img class="sym" src="symetri-forside.gif" loop="infinite" />
+</body>
+</html>

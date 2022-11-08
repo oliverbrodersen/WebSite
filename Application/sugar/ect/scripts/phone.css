@@ -1,0 +1,483 @@
+﻿
+        #phone{
+            position: absolute;
+            top: 7vw;
+            left: -17vw;
+            width: 15vw;
+            height: 28vw;
+            background-color: #f7f5e6;
+            z-index: 200;
+            border: .25vw solid white;
+            border-radius: 1.4vw;
+            box-shadow: 0 1px 0 #d7d5c3 , 1px 0 0 #f7f5e6 , 1px 2px 0 #d7d5c3 , 2px 1px 0 #f7f5e6 , 2px 3px 0 #d7d5c3 , 3px 2px 0 #f7f5e6 , 3px 4px 0 #d7d5c3 , 4px 3px 0 #f7f5e6 , 4px 5px 0 #d7d5c3 , 5px 4px 0 #f7f5e6 , 5px 6px 0 #d7d5c3 , 6px 5px 0 #f7f5e6 , 6px 7px 0 #d7d5c3 , 7px 6px 0 #f7f5e6 , 7px 8px 0 #d7d5c3 , 8px 7px 0 #f7f5e6, rgba(0,0,0,.24) 1vw 1.3vw 0vw -.4vw;
+            -webkit-transition: left 700ms cubic-bezier(0.560, 0, 0.405, 1); /* older webkit */
+            -webkit-transition: left 700ms cubic-bezier(0.560, -0.600, 0.405, 1.610); 
+               -moz-transition: left 700ms cubic-bezier(0.560, -0.600, 0.405, 1.610); 
+                 -o-transition: left 700ms cubic-bezier(0.560, -0.600, 0.405, 1.610); 
+                    transition: left 700ms cubic-bezier(0.560, -0.600, 0.405, 1.610); /* custom */
+
+            -webkit-transition-timing-function: cubic-bezier(0.560, 0, 0.405, 1); /* older webkit */
+            -webkit-transition-timing-function: cubic-bezier(0.560, -0.600, 0.405, 1.610); 
+               -moz-transition-timing-function: cubic-bezier(0.560, -0.600, 0.405, 1.610); 
+                 -o-transition-timing-function: cubic-bezier(0.560, -0.600, 0.405, 1.610); 
+                    transition-timing-function: cubic-bezier(0.560, -0.600, 0.405, 1.610); /* custom */
+            }
+        #phone:after{
+            content:" ";
+            position: absolute;
+            width: 30%;
+            margin-left: 35%;
+            height: .2vw;
+            border-radius: .2vw;
+            background-color: #cdc8a5;
+            top: 1vw;
+            z-index: 300;
+        }
+        #screen{
+            position: absolute;
+            width: 95%;
+            margin-left: 2.5%;
+            height: 85%;
+            top: 2.2vw;
+            background-color: white;
+            float: left;
+            overflow: hidden;
+            border: .1vw solid #c5c5c5;
+            display: block;
+        }
+        #contacts::before, #screen::before{
+            content: "MESSAGE";
+            position: absolute;
+            width: 100%;
+            top: 0vw;
+            text-align: center;
+            font-family: 'Showcard Gothic';
+            color: white;
+            background-color: #ebd1e2;
+            font-size: 2vw;
+            height: 10%;
+            box-shadow:0px .1vw 0 0 rgba(0,0,0,0.24);
+        }
+        #mBack{
+            position: absolute;
+            height: 1vw;
+            width: 1vw;
+            border: .15vw solid #dd97c5;
+            border-right-width: 0;
+            border-bottom-width: 0;
+            transform: rotate(-45deg);
+            top: .6vw;
+            left: .5vw;
+            cursor: pointer;
+        }
+        #screen.sd::before{
+            content: "Sugar Daddy";
+            height: 10.5%;
+            font-size: 1.7vw;
+        }
+        #screen.a::before{
+            content: "Achievements";
+            height: 10.5%;
+            font-size: 1.7vw;
+        }
+        .message{
+            position: relative;
+            width: 95%;
+            margin-left: 2.5%;
+            height: 15%;
+            background-color: white;
+            border-bottom: .1vw solid #ebd1e2;
+            margin-bottom: .5vw;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        .message::after{
+            content: " ";
+            position: absolute;
+            height: 1vw;
+            width: 1vw;
+            border: .15vw solid #c4c4c4;
+            border-left-width: 0;
+            border-bottom-width: 0;
+            transform: rotate(45deg);
+            top: .6vw;
+            right: .5vw;
+            transition: all ease .3s;
+        }
+        .message::after:hover{
+            right: 0;
+        }
+        .message::before{
+            content: "No new message";
+            position: absolute;
+            font-family: 'Showcard Gothic';
+            font-size: 1vw;
+            height: 1vw;
+            width: 100%;
+            color: #ebd1e2;
+            left: 0;
+            bottom: .1vw;
+        }
+        .message.new::before{
+            content: "new message";
+            -webkit-animation-name: messageAnim;
+            -webkit-animation-play-state: running;
+            -webkit-animation-duration: 4s;
+            -webkit-animation-iteration-count: 1;
+            -webkit-animation-timing-function: ease;
+        }
+       @-webkit-keyframes messageAnim{
+            0%{left: -50%;}
+            70%{left: 100%}
+            70.0001%{left: -50%;}
+            100%{left: 0%;}
+        }
+        #sender{
+            font-family: 'Showcard Gothic';
+            font-size: 1.6vw;
+            color: white;
+            text-shadow: .05vw .05vw 0 black , -.05vw -.05vw 0 black , .05vw -.05vw 0 black , -.05vw .05vw 0 black;
+        }
+        #contacts{
+            position: absolute;
+            height: 90%;
+            width: 100%;
+            padding-bottom: 5%;
+            left: 0%;
+            padding-top: 3vw;
+            background-color: white;
+            z-index: 10;
+            transition: all ease 1s;
+            box-shadow: rgba(0,0,0,.24) .3vw 0;
+        }
+        #type{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8%;
+            background-color: #fae5f3;
+            border-top: .2vw solid #ebd1e2;
+        }
+        #typetype{
+            position: relative;
+            width: 80%;
+            margin-left: 8%;
+            margin-right: 10%;
+            height: 70%;
+            margin-top: 1%;
+            border-radius: 10vw;
+            border: .1vw solid #ebd1e2;
+            padding-left: .5vw;
+            font-size: .6vw;
+        }
+        input:focus{
+            outline: 0;
+        }
+        .holder{
+            position: relative;
+            width: 100%;
+            display: block;
+            height: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        h8{
+            margin-bottom: 2%;
+            margin-top: 0%;
+            display: block;
+            width: auto;
+            max-width: 70%;
+            float: left;
+            height: auto;
+            margin-left: 5%;
+            color: white;
+            background-color: #EBD1E2;
+            z-index: 100;
+            padding: .5vw;
+            border-radius: .5vw;
+            border-bottom-left-radius: 0;
+            font-family: Arial;
+            font-size: .8vw;
+        }
+        h8.me{
+            margin-left: auto;
+            margin-right: 5%;
+            background-color: #efefef;
+            color: black;
+            border-radius: .5vw;
+            float: right;
+            border-bottom-right-radius: 0;
+        }
+        #textField{
+            position: absolute;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: 79%;
+            width: 100%;
+            margin-top: 19.2%;
+        }
+        #textField::-webkit-scrollbar{
+            width: .3vw;
+        }
+        #textField::-webkit-scrollbar-thumb{
+            background-color: rgba(0,0,0,0.24);
+            border-radius: 1em;
+        }
+        #textField::-webkit-scrollbar-track{
+            background-color: white;
+            width: 0.8vw;
+        }
+        #snakeBG{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url("ect/billeder/snakeWP.png");
+            background-repeat: repeat-x;
+            background-size:contain;
+            z-index: 10000;
+            -webkit-animation: bgRun running 8s linear infinite;
+        }
+        #snakeBG:before{
+            content: " ";
+            position: absolute;
+            width: 100%;
+            top: 5.9%;
+            height: 40%;
+            background-image: url("ect/billeder/bgbg.jpg");
+            background-size: cover;
+            background-repeat: repeat-x; 
+            z-index: -3;
+            -webkit-animation-name: bgbgRun;
+            -webkit-animation-play-state: running;
+            -webkit-animation-duration: 1800s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+        }
+        
+        @-webkit-keyframes bgbgRun{
+            0%{background-position-x: 0;}
+            100%{background-position-x: -1781.25vw;}
+        }
+        @-webkit-keyframes bgRun{
+            0%{background-position-x: 0;}
+            100%{background-position-x: -14.25vw;}
+        }
+        #pipet, #pipeb{
+            position: absolute;
+            width: 20%;
+            height: 100%;
+            right: -10%;
+            z-index: 1000;
+        }
+        #flappyScore{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            font-size: 12vw;
+            font-family: Arial;
+            text-align: center;
+            color: rgba(255,255,255,1);
+            text-shadow: rgba(0,0,0,.24) .5vw .5vh 0;
+            z-index: -1;
+            top: -.8vw;
+        }
+        #char {
+            position: absolute;
+            width: 20%;
+            top: 35%;
+            left: 10%;
+            -webkit-animation: FlappyAnim 2s running infinite ease;
+    }
+        @-webkit-keyframes FlappyAnim{
+            0%{top: 35%;}
+            50%{top: 45%}
+            100%{top: 35%}
+        }
+        h18{
+            position: absolute;
+            bottom: 10%;
+            left: 8%;
+            z-index: 100;
+            background-color: #d9d9d9;
+            border: solid .1vw white;
+            border-radius: .2vw;
+            font-size: 2vw;
+            font-family: Arial;
+            color: white;
+            text-align: center;
+            padding: .2vw .4vw;
+            padding-bottom: .4vw;
+            line-height: 3vw;
+            box-shadow: #aeaeae 0 0 0 .1vw;
+            -webkit-animation: esc 6s paused linear 1;
+        }
+        h18.space{
+            left: 45%;
+            bottom: 10%;
+            padding: .2vw .6vw;
+            padding-bottom: .4vw;
+            -webkit-animation: space 6s paused linear 1;
+        }
+        @-webkit-keyframes esc{
+            0%{left: 8%;}
+            100%{left: -92%;}
+        }
+        @-webkit-keyframes space{
+            0%{left: 45%;}
+            100%{left: -55%;}
+        }
+        h18::after{
+            content: "esc";
+            position: absolute;
+            top: -.1vw;
+            left: -.1vw;
+            z-index: 100;
+            background-color: #d9d9d9;
+            border: solid .1vw white;
+            border-radius: .2vw;
+            font-size: 2vw;
+            font-family: Arial;
+            color: white;
+            text-align: center;
+            padding: .2vw .4vw;
+            padding-bottom: .4vw;
+            line-height: 3vw;
+            box-shadow: #aeaeae 0 0 0 .1vw, rgb(255,255,255) 0 .2vw 0 0;
+        }
+        h18.space::after{
+            content: "space";
+            padding: .2vw .6vw;
+            padding-bottom: .4vw;
+        }
+        h18::before{
+            content: " ";
+            position: absolute;
+            top: 20%;
+            left: -.1vw;
+            width: calc(100% + .18vw);
+            box-shadow: #aeaeae 0 0 0 .1vw, rgba(0,0,0,.24) .2vw .2vw 0 0;
+            height: 100%;
+            background-color:  #d9d9d9;
+            border-radius: .2vw;
+        }
+        h18:hover{
+
+        }
+        #phoneBut{
+            position: absolute;
+            bottom: 25.6vh;
+            left: 27vw;
+            z-index: 1000;
+            width: 5vw;
+            height: 5vw;
+            background-image: url("ect/billeder/phbut.png");
+            background-size:cover;
+            border-radius: .7vw;
+            outline: none;
+            border: none;
+            box-shadow: #d0abad 0 .3vw;
+            transition: all .1s ease;
+            cursor: pointer;
+        }
+        #phoneBut:hover{
+            box-shadow:  #d0abad 0 0vw;
+            bottom: 25vh;
+        }
+        #spanPhone{
+            position: absolute;
+            top: -.4vw;
+            right: -.4vw;
+            background-color: red;
+            height: 1.2vw;
+            min-width:1.2vw;
+            font-size: 1vw;
+            font-family: Arial;
+            color: white;
+            border-radius: .5vw;
+        }
+        #messageIndicator{
+            position: absolute;
+            width: 14.25vw;
+            height: 7vw;
+            background-color: white;
+            bottom: -12vw;
+            left: calc(50% - 7.5vw);
+            z-index: 10000;
+            -webkit-transition: bottom 500ms cubic-bezier(0.560, 0, 0.405, 1); /* older webkit */
+            -webkit-transition: bottom 500ms cubic-bezier(0.560, -0.600, 0.405, 1.610); 
+               -moz-transition: bottom 500ms cubic-bezier(0.560, -0.600, 0.405, 1.610); 
+                 -o-transition: bottom 500ms cubic-bezier(0.560, -0.600, 0.405, 1.610); 
+                    transition: bottom 500ms cubic-bezier(0.560, -0.600, 0.405, 1.610); /* custom */
+
+            -webkit-transition-timing-function: cubic-bezier(0.560, 0, 0.405, 1); /* older webkit */
+            -webkit-transition-timing-function: cubic-bezier(0.560, -0.600, 0.405, 1.610); 
+               -moz-transition-timing-function: cubic-bezier(0.560, -0.600, 0.405, 1.610); 
+                 -o-transition-timing-function: cubic-bezier(0.560, -0.600, 0.405, 1.610); 
+                    transition-timing-function: cubic-bezier(0.560, -0.600, 0.405, 1.610); /* custom */
+            -webkit-animation: popMes 5s cubic-bezier(0.560, -0.600, 0.405, 1.610) 1;
+        }
+        @-webkit-keyframes popMes{
+            0%{bottom: -12vw;}
+            10%{bottom: -3vw;}
+            90%{bottom: -3vw;}
+            100%{bottom: -12vw;}
+        }
+        #messageIndicator::before{
+            content: " ";
+            position: absolute;
+            width: 15vw;
+            height: 10.2vw;
+            top: -2.45vw;
+            left: -.625vw;
+            background-color: #f7f5e6;
+            border: .25vw solid white;
+            border-radius: 1.4vw;
+            box-shadow: 0 1px 0 #d7d5c3 , 1px 0 0 #f7f5e6 , 1px 2px 0 #d7d5c3 , 2px 1px 0 #f7f5e6 , 2px 3px 0 #d7d5c3 , 3px 2px 0 #f7f5e6 , 3px 4px 0 #d7d5c3 , 4px 3px 0 #f7f5e6 , 4px 5px 0 #d7d5c3 , 5px 4px 0 #f7f5e6 , 5px 6px 0 #d7d5c3 , 6px 5px 0 #f7f5e6 , 6px 7px 0 #d7d5c3 , 7px 6px 0 #f7f5e6 , 7px 8px 0 #d7d5c3 , 8px 7px 0 #f7f5e6, rgba(0,0,0,.24) 1vw 1.3vw 0vw -.4vw;
+            z-index: -1;
+        }
+        #messageIndicator:after{
+            content:" ";
+            position: absolute;
+            width: 30%;
+            margin-left: 35%;
+            height: .2vw;
+            border-radius: .2vw;
+            background-color: #cdc8a5;
+            top: -1.2vw;
+            z-index: 300;
+        }
+        h20{
+            position: absolute;
+            width: 100%;
+            top:1.6vw;
+            height: auto;
+            background-color: white;
+            color: #ffc7c9;
+            font-family: 'Showcard Gothic';
+            font-size: 1.5vw;
+            text-align: center;
+        }
+        h20::after{
+            content: "new message from:";
+            position: absolute;
+            top: -1.6vw;
+            left: 0;
+            font-size: 1.3vw;
+            background-color: #ffc7c9;
+            color: white;
+            width: 100%;
+            border-bottom: #e59a9d .1vw solid;
+
+        }
+        #phoneBackdrop{
+            position: absolute;
+            margin: 0;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            backdrop-filter: blur(5px);
+            z-index: 100;
+        }

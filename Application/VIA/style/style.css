@@ -1,0 +1,192 @@
+@font-face {
+    font-family: "VIA regular";
+    src: url("fonts/via_type_regular-webfont.woff") format('woff');
+}
+@font-face {
+    font-family: "VIA bold";
+    src: url("fonts/via_type_bold-webfont.woff") format('woff');
+    font-weight: bold;
+}
+@font-face {
+    font-family: "VIA light";
+    src: url("fonts/via_type_light-webfont.woff") format('woff');
+    font-style: italic;
+}
+body{
+    background: #F0F1F2;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, p, a, li, dl{
+    font-family: "VIA regular", sans-serif;
+    color: #414141;
+}
+.button{
+    font-family: "VIA bold", sans-serif;
+    background: #32C8AA;
+    border: none;
+    font-size: 1.3em;
+    color: #414141;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: border .1s ease-in;  
+    transform: translate(-10%,-10%);
+    border-bottom: 0 solid #95D1C5;
+    border-image: url(img/bgTile.png)  60 0 repeat;
+}
+.button:hover{
+    border-bottom-width: 10px;
+}
+#header{
+    background: #D7D7D7;
+    height: 6em;
+    margin: 0;
+    width: 100%;
+    z-index: 20;
+}
+#header a img{
+    height: 6em;
+    margin-left: 1em;
+}
+#header ul{
+    position: absolute;
+    right: 30px;
+    top: 6em;
+    transform: translate(0, -100%);
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#header li.active{
+    background: #95D1C5;
+}
+#header li.active a:hover{
+    color: #414141;
+}
+#header li{
+    font-family: "VIA bold", sans-serif;
+    font-weight: 900;
+    float: left; 
+    list-style-type: none;
+    padding: 1.3em;
+    color: #414141;
+}
+#header a:hover{
+    color: white;
+}
+#header #collapse{
+    height: 4em;
+    width: 4em;
+    position: absolute;
+    margin: 1em;
+    top: 0;
+    right: 0;
+    background-image: url(img/menu.png);
+    cursor: pointer;
+    visibility: hidden;
+}
+#context{
+    min-height: 90vh;
+    z-index: -10;
+}
+.text{
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 2em;
+}
+#footer{
+    background: #B1B1B1;
+    height: 15em;
+    margin: 0;
+    width: 100%;
+    padding-bottom: 1.5em;
+}
+#footer ul{
+    float: left;
+    margin: 30px 4em 0 50px;
+}
+#footer li{
+    font-family: "VIA regular", sans-serif;
+    list-style-type: none;
+    color: #414141;
+    font-size: .9em;
+    margin: 10px 10px 10px 0;
+}
+#footer li:first-of-type{
+    font-family: "VIA regular", sans-serif;
+    font-weight: 900;
+    color: #414141;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+#footer a, #header a{
+    text-decoration: none;
+    color: #414141;
+}
+#footer a:hover{
+    color: #808080;
+}
+#footer #cont{
+    position: absolute;
+    height: inherit;
+    width: 36em;
+    transform: translate(-50%, 0);
+    left: 50%;
+}
+#menuFooter{
+    border-right: 1px solid #414141;
+    margin-right: 0 !important;
+    padding-right: 3.5em;
+}
+#contactFooter{
+    margin-left: 1.5em !important;
+}
+@media screen and (max-width: 60em) {
+    body{
+        overflow-x: auto;
+    }
+    #header #menuContainer{
+        position: absolute;
+        height: 0;
+        width: 100%;
+        left: 0;
+        top: 4.5em;
+        margin: 1.5em 1.5em 1.5em 0;
+        overflow: hidden;
+        transition: height .5s ease, width .6s ease, boxShadow .6s ease;
+        background: #D7D7D7;
+        box-shadow: none;
+        z-index: 1000 !important;
+    }
+    #header #menuContainer.activeMenu{
+        height: 23em;
+    }
+    #header #collapse{
+        visibility: visible;
+    }
+    #header ul{
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translate(0, 0);
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        z-index: 1000 !important;
+    }
+    #header li.active{
+        background: #95D1C5;
+    }
+    #header li{
+        font-family: "VIA bold", sans-serif;
+        font-weight: 900;
+        list-style-type: none;
+        text-align: center;
+        color: #414141;
+        float: none;
+        left: 0;
+        right: unset;
+        z-index: 1000 !important;
+    }
+}

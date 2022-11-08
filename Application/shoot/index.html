@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="ect/style.css">
+    <script type="text/javascript" src="ect/main.js"></script>
+    <script type="text/javascript" src="ect/shop.js"></script>
+
+</head>
+<body style="cursor: crosshair;">
+    <div id="container" style="cursor: crosshair;">
+        <div id="player">
+            <div id="life">
+
+            </div>
+        </div>
+        <div id="autoShoot">
+
+        </div>
+        <div id="statHolder">
+            <h1 id="bullets">100</h1>
+            <h2 id="value">0</h2>
+        </div>
+
+        <div id="shop">
+            <h3>Shop</h3>
+            <div id="shopArea">
+                <button id="shopBut" class="active" onclick="shop(this);">Ammo</button>
+                <button id="shopBut" class="" onclick="shop(this);">Protection</button>
+                <button id="shopBut" class="" onclick="shop(this);">Auto</button>
+                <div id="shopContent">
+
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById("player").style.left = shootX - 50 + "px";
+            document.getElementById("autoShoot").style.left = shootX - (autoRange / 2) + "px";
+            document.getElementById("autoShoot").style.top = shootY - (autoRange / 2) + "px";
+            document.getElementById("autoShoot").style.width = autoRange + "px";
+            document.getElementById("autoShoot").style.height = autoRange + "px";
+        </script>
+    </div>
+</body>
+</html>

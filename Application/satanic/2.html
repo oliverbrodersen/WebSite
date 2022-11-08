@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Greetings from satan</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-87006229-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <h1>Hi, it's satan again</h1>
+    <h2>I know this is quite embaresing, but we lost your number..</h2>
+    <h2>And since we got so many complaints about the last design, we made a brand new one!</h2>
+    <div id="numberContainer">
+        <h4 id="number">11111111</h4>
+        <div id="controls">
+            <button id="up" onclick="up()">Up</button>
+            <button id="down" onclick="down()">Down</button>
+        </div>
+    </div>
+    <div id="text">
+    <button id="Submit" class="Submit" onmousedown="buttonDown()" onmouseup="window.location='3.html';">Submit</button>
+    </div>
+    <script>
+        var number = "11111111";
+        function up() {
+            if (number <= 99999999 && number >= 10000000) {
+                number++;
+                document.getElementById("number").innerHTML = number;
+           } 
+        }
+        function down() {
+            if (number <= 99999999 && number >= 10000000) {
+                number--;
+                document.getElementById("number").innerHTML = number;
+            }
+        }
+    </script>
+</body>
+</html>

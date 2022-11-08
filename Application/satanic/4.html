@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Greetings from satan</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-87006229-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <style>
+        h5 {
+            font-family: 'Comic Neue';
+            font-size: 4em;
+            width: 10em;
+            height: 1.6em;
+            color: black;
+            padding-top: .3em;
+            background-color: white;
+            margin: .05em;
+            float: left;
+        }
+        h4{
+            font-family: 'Comic Neue';
+            color: white;
+            width: 100%;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 0;
+        }
+        #yes, #no{
+                font-family: 'Comic Neue';
+                font-size: 1.5em;
+                
+            width: 5em;
+            float: left;
+            color: white;
+            background-color: #b3eca0;
+            border: 0 solid #82cd7c;
+            border-bottom-width: .1em;
+            border-radius: .1em;
+            font-family: 'Comic Neue';
+            padding: .2em;
+            margin-left: .2em;  
+            transition: all ease .1s;
+             cursor: pointer;
+
+        }
+        #yes:hover, #no:hover{
+            border: 0 solid #82cd7c;
+            margin-top: .1em;
+        }
+        #butons{
+            width: 16em;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <h1>Please don't judge..</h1>
+    <h2 style="margin-bottom: 1em;">I know this may seem ridicules, but i tecnically havn't lost your number this time. I just don't know wich is yours..</h2>
+
+    <h4>Is this your number?</h4>
+
+    <div id="text">
+        <h5 id="num">34679534</h5>
+        <div id="butons">
+            <button id="no" onclick="document.getElementById('num').innerHTML = Math.floor(Math.random() * 89999999) + 10000000;">No</button>
+            <button id="yes" onclick="window.location = '5.html';">Yes</button>
+        </div>
+    </div>
+</body>
+</html>

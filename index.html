@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+</head>
+
+<body data-theme="false"></body>
+
+</html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oliver Brodersen - Full stack developer</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script.js"></script>
+<meta name="description"
+    content="Hi! I’m Oliver Brodersen. Software engineer at VIA Univercity College. Github @OliverBrodersen. Linkedin @Oliver-Brodersen." />
+<meta property="og:description"
+    content="Hi! I’m Oliver Brodersen. Software engineer at VIA Univercity College. Github @OliverBrodersen. Linkedin @Oliver-Brodersen." />
+<meta property="og:site_name" content="Oliver Brodersen" />
+<meta property="og:title" content="Oliver Brodersen">
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://oliver-brodersen.com/" />
+<meta name="google-site-verification" content="UyuhfroCwkL6R7PKxppG1QUdz6na_gzJJBFvYGzXp4Q" />
+<meta name="author" content="Oliver Brodersen" />
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
+<link href="https://plus.google.com/u/0/107507810385860800591" rel="publisher" />
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<link href="https://use.typekit.net/exn3vdd.css" rel="stylesheet" />
+<link href="style.css" rel="stylesheet" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155151058-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-155151058-1');
+</script><noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSTVPVZ" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+    if (Cookies.get('mode') !== undefined)
+        document.body.setAttribute('data-theme', Cookies.get('mode'));
+    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.body.setAttribute('data-theme', 'dark');
+    else
+        document.body.setAttribute('data-theme', 'false');
+
+</script>
+<div class="hidden">
+    <script type="text/javascript">
+        //Preload images for game
+        const m = ["0", "1", "2", "0_but", "1_but", "2_but", "1p", "2p", "avg", "easy", "hard", "bot", "you", "x", "o", "retry"];
+        var images = [];
+        for (let i = 0; i < m.length; i++) {
+            a = new Image();
+            a.src = "img/" + m[i] + ".png";
+            images.push(a)
+        }
+    </script>
+</div>
+
+<div id="load"></div>
+<container>
+    <div id="top"><a class="topper" href="https://oliver-brodersen.com">Oliver Brodersen</a>
+
+        <div class="containerCont">
+            <div class="elm profile">
+                <p class="head">Oliver Brodersen</p>
+
+                <p class="subtext"><img src="img/git.png" /> Github <a href="https://github.com/oliverbrodersen"
+                        target="_blank">@OliverBrodersen</a></p>
+
+                <p class="subtext"><img src="img/linkedin.png" /> Linkedin <a
+                        href="https://www.linkedin.com/in/oliver-brodersen/" target="_blank">@Oliver-Brodersen</a></p>
+            </div>
+
+            <div id="game">
+                <div class="gmContainer"><button class="gameMode" id="ticTacToe" onclick="setGameMode(1)">Tic Tac
+                        Toe</button><button class="gameMode active" id="rockPaper" onclick="setGameMode(0)">Rock Paper
+                        Scissors</button></div>
+
+                <div id="ent">
+                    <div id="screen">
+                        <div id="rockPaperScissorScreenCont">
+                            <p id="score">0-0</p>
+                            <img id="player" src="" />
+                            <div id="split"></div>
+                            <img id="ai" src="" />
+                            <p id="pop">CHOOSE</p>
+                        </div>
+
+                        <div class="invisible" id="ticTacToeScreenCont">
+                            <p id="tttText">1p or 2p</p>
+
+                            <div id="board">
+                                <div class="field" id="s11"></div>
+
+                                <div class="field" id="s21"></div>
+
+                                <div class="field" id="s31"></div>
+
+                                <div class="field" id="s12"></div>
+
+                                <div class="field" id="s22"></div>
+
+                                <div class="field" id="s32"></div>
+
+                                <div class="field" id="s13"></div>
+
+                                <div class="field" id="s23"></div>
+
+                                <div class="field" id="s33"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="controllsContainer"><button class="controlls" id="c1" onclick="play(0);"><img alt="Rock"
+                                id="c1img" src="img/0_but.png" /></button><button class="controlls" id="c2"
+                            onclick="play(1);"><img alt="Paper" id="c2img" src="img/1_but.png" /></button><button
+                            class="controlls" id="c3" onclick="play(2);"><img alt="Sicsor" id="c3img"
+                                src="img/2_but.png" /></button></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="down">&lt;</div>
+    </div>
+
+
+    
+    <div id="bottom">
+        <div class="card" id="SCA"
+        onclick="window.location.href = 'http://oliver-brodersen.com/Application/cubeBeta/';"><img alt="icon"
+            src="img/speedCube.png" />
+        <h1>Cubing Timer<span> <svg class="arrow" version="1.1" viewbox="0 0 22 22"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <polygon
+                        points="0 12.9799654 0 9.02959798 14.0593024 9.02959798 7.68677816 3.24714877 10.2003314 0 22 11.0229672 10.2076856 22 7.68060524 18.8048361 14.0690181 12.9799654">
+                    </polygon>
+                </svg> </span></h1>
+
+        <p>This tool is for speedcubers who want to time their solves and sync them with ease! Keeps track of your
+            progress.</p>
+    </div>
+
+    <div class="card" id="TD" onclick="window.location.href = 'http://oliver-brodersen.com/Application/todo/';"><img
+            alt="icon" src="img/todoScreen.png" />
+        <h1>ToDo list <span> <svg class="arrow" version="1.1" viewbox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <polygon
+                        points="0 12.9799654 0 9.02959798 14.0593024 9.02959798 7.68677816 3.24714877 10.2003314 0 22 11.0229672 10.2076856 22 7.68060524 18.8048361 14.0690181 12.9799654">
+                    </polygon>
+                </svg> </span></h1>
+
+        <p>An interactive ToDo list that syncronises in realtime across devices thats signed in using a Google
+            account.</p>
+    </div>
+        <div class="card" id="SDC" onclick="window.location.href = 'http://oliver-brodersen.com/Application/sugar/';">
+            <img alt="icon" src="img/sugarScreen.png" />
+            <h1>Idle Game <span> <svg class="arrow" version="1.1" viewbox="0 0 22 22" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <polygon
+                            points="0 12.9799654 0 9.02959798 14.0593024 9.02959798 7.68677816 3.24714877 10.2003314 0 22 11.0229672 10.2076856 22 7.68060524 18.8048361 14.0690181 12.9799654">
+                        </polygon>
+                    </svg> </span></h1>
+
+            <p>An idle game that inkludes mini games, achivements, customization, scaling and much more!</p>
+        </div>
+
+        <div class="card" id="OW" onclick="window.location.href = 'http://oliver-brodersen.com/more/';"><img alt="icon"
+                src="img/filesScreen.png" />
+            <h1>Other Work <span> <svg class="arrow" version="1.1" viewbox="0 0 22 22"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <polygon
+                            points="0 12.9799654 0 9.02959798 14.0593024 9.02959798 7.68677816 3.24714877 10.2003314 0 22 11.0229672 10.2076856 22 7.68060524 18.8048361 14.0690181 12.9799654">
+                        </polygon>
+                    </svg> </span></h1>
+
+            <p>A collection of other work, both websites, videos, renders and other medias that i find worthy of sharing
+            </p>
+        </div>
+    </div>
+
+    <div id="aboutPage">
+        <div id="footer"><button id="darkmode" title="Toggle dark mode"><svg class="moon-icon" height="24px"
+                    onclick="document.body.setAttribute('data-theme', 'dark'), Cookies.set('mode', 'dark', { expires : 35 });"
+                    version="1.1" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M7,12 C7,14.7614237 9.23857625,17 12,17 C13.6784032,17 15.1636533,16.1730136 16.0705043,14.904287 C15.722047,14.9672643 15.3641601,15 15,15 C11.6862915,15 9,12.3137085 9,9 C9,8.63583993 9.03273572,8.27795299 9.09571298,7.92949574 C7.82698638,8.8363467 7,10.3215968 7,12 Z M13.0850064,5.48759049 C13.0725916,5.49420639 13.0607081,5.50069096 13.0493559,5.50704421 C11.8265875,6.1913651 11,7.49915262 11,9 C11,11.209139 12.790861,13 15,13 C16.4434624,13 17.708346,12.2354133 18.4117504,11.0891403 C18.4223667,11.0718398 18.4332304,11.0534626 18.4443415,11.0340087 L18.4443111,11.0339913 C18.5183163,10.9044189 18.6833485,10.8593728 18.8129209,10.933378 C18.8869265,10.9756462 18.9366504,11.0503547 18.9470753,11.1349405 C18.9470753,11.1349405 18.9470753,11.1349405 18.9470753,11.1349405 C18.9820102,11.4183955 19,11.7070969 19,12 C19,15.8659932 15.8659932,19 12,19 C8.13400675,19 5,15.8659932 5,12 C5,8.13400675 8.13400675,5 12,5 C12.3438723,5 12.6819534,5.02479546 13.0125527,5.072696 C13.0125527,5.072696 13.0125527,5.072696 13.0125527,5.072696 L13.0125527,5.072696 C13.1336728,5.09024509 13.2176336,5.20265863 13.2000846,5.32377868 C13.1899712,5.39357867 13.1472354,5.45439594 13.0849929,5.48756515 Z"
+                        fill-rule="nonzero"></path>
+                </svg> <svg class="sun-icon" height="24px"
+                    onclick="document.body.setAttribute('data-theme', 'false'), Cookies.set('mode', 'false', { expires : 35 });"
+                    version="1.1" viewbox="0 0 24 24" width="24px" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M12,17 C9.23857625,17 7,14.7614237 7,12 C7,9.23857625 9.23857625,7 12,7 C14.7614237,7 17,9.23857625 17,12 C17,14.7614237 14.7614237,17 12,17 Z M12,15 C13.6568542,15 15,13.6568542 15,12 C15,10.3431458 13.6568542,9 12,9 C10.3431458,9 9,10.3431458 9,12 C9,13.6568542 10.3431458,15 12,15 Z M12,5 C11.4477153,5 11,4.55228475 11,4 C11,3.44771525 11.4477153,3 12,3 C12.5522847,3 13,3.44771525 13,4 C13,4.55228475 12.5522847,5 12,5 Z M12,21 C11.4477153,21 11,20.5522847 11,20 C11,19.4477153 11.4477153,19 12,19 C12.5522847,19 13,19.4477153 13,20 C13,20.5522847 12.5522847,21 12,21 Z M19,12 C19,11.4477153 19.4477153,11 20,11 C20.5522847,11 21,11.4477153 21,12 C21,12.5522847 20.5522847,13 20,13 C19.4477153,13 19,12.5522847 19,12 Z M3,12 C3,11.4477153 3.44771525,11 4,11 C4.55228475,11 5,11.4477153 5,12 C5,12.5522847 4.55228475,13 4,13 C3.44771525,13 3,12.5522847 3,12 Z M16.9497475,7.05025253 C16.5592232,6.65972824 16.5592232,6.02656326 16.9497475,5.63603897 C17.3402718,5.24551468 17.9734367,5.24551468 18.363961,5.63603897 C18.7544853,6.02656326 18.7544853,6.65972824 18.363961,7.05025253 C17.9734367,7.44077682 17.3402718,7.44077682 16.9497475,7.05025253 Z M5.63603897,18.363961 C5.24551468,17.9734367 5.24551468,17.3402718 5.63603897,16.9497475 C6.02656326,16.5592232 6.65972824,16.5592232 7.05025253,16.9497475 C7.44077682,17.3402718 7.44077682,17.9734367 7.05025253,18.363961 C6.65972824,18.7544853 6.02656326,18.7544853 5.63603897,18.363961 Z M7.05025253,7.05025253 C6.65972824,7.44077682 6.02656326,7.44077682 5.63603897,7.05025253 C5.24551468,6.65972824 5.24551468,6.02656326 5.63603897,5.63603897 C6.02656326,5.24551468 6.65972824,5.24551468 7.05025253,5.63603897 C7.44077682,6.02656326 7.44077682,6.65972824 7.05025253,7.05025253 Z M18.363961,18.363961 C17.9734367,18.7544853 17.3402718,18.7544853 16.9497475,18.363961 C16.5592232,17.9734367 16.5592232,17.3402718 16.9497475,16.9497475 C17.3402718,16.5592232 17.9734367,16.5592232 18.363961,16.9497475 C18.7544853,17.3402718 18.7544853,17.9734367 18.363961,18.363961 Z">
+                    </path>
+                </svg></button><span class="lang" onclick="MicroModal.show('modal-1');">Cookies</span> &copy; Oliver
+            Brodersen 2021
+
+            <div id="pole"></div>
+        </div>
+    </div>
+</container>
+
+<p></p>
+
+<div aria-hidden="true" class="modal micromodal-slide" id="modal-1">
+    <div class="modal__overlay" data-micromodal-close="" tabindex="-1">
+        <div aria-labelledby="modal-1-title" aria-modal="true" class="modal__container" role="dialog">
+            <header class="modal__header">
+                <h2 class="modal__title" id="modal-1-title">Cookies</h2>
+                <button aria-label="Close modal" class="modal__close" data-micromodal-close=""></button>
+            </header>
+
+            <main class="modal__content" id="modal-1-content">
+                <p>Like everyone else, this website uses cookies. Simply for towo things. One for Google Analytics, that
+                    enables me to check trafic and other information about the website. And secondly for remembering if
+                    you, the user, prefers the dark theme. For more information click the <code>Learn more</code>
+                    button.</p>
+            </main>
+
+            <footer class="modal__footer"><button class="modal__btn modal__btn-primary"
+                    onclick="window.location.href = 'https://cookiesandyou.com';">Learn more</button><button
+                    aria-label="Close this dialog window" class="modal__btn" data-micromodal-close="">Close</button>
+            </footer>
+        </div>
+    </div>
+</div>
+
+<p></p>

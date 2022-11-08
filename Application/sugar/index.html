@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<script>
+    //                 Sugar Daddy Clicker
+    //oooooooooo.  oooooooooooo ooooooooooooo       .o.       
+    //`888'   `Y8b `888'     `8 8'   888   `8      .888.      
+    // 888     888  888              888          .8"888.     
+    // 888oooo888'  888oooo8         888         .8' `888.    
+    // 888    `88b  888    "         888        .88ooo8888.   
+    // 888    .88P  888      ,8      888       .8'     `888.  
+    //o888bood8P'  o888ooooood8     o888o     o88o     o8888o 
+</script>
+<html lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+    <title id="title">SUGER DADDY CLICKER</title>
+    <meta charset='utf-8' />
+    <meta property="og:image" href="ect/billeder/cover.png" />
+    <meta name="title" content="SUGAR DADDY CLICKER" />
+    <meta name="description" content="Your search for the best clicker game have come to an end. Introducing, SUGAR DADDY CLICKER BETA" />
+    <meta name="keywords" content="Clicker, Sugar Daddy, Sugar Daddy Clicker, Game, Fun, Free games, Fun Games"/>
+    <meta name="revisit-after" content="30 days">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="icon" type="image/png" sizes="192x192" href="ect/billeder/mont.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ect/billeder/mont.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="ect/billeder/mont.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ect/billeder/mont.png">
+    <meta name="msapplication-TileColor" content="#F5C7C9">
+    <meta name="msapplication-TileImage" content="ect/billeder/mont.png">
+    <meta name="theme-color" content="#F5C7C9">
+    <meta property="og:image:width" content="960" />
+    <meta property="og:image:height" content="545" />
+    <meta property="twitter:image" content="ect/billeder/cover.png" />
+
+    <link rel="stylesheet" type="text/css" href="ect/scripts/style.css">
+    <link rel="stylesheet" type="text/css" href="ect/scripts/phone.css">
+    <script type="text/javascript" src="ect/scripts/achievements.js"></script>
+    <script type="text/javascript" src="ect/scripts/cookies.js"></script>
+    <script type="text/javascript" src="ect/scripts/shop.js"></script>
+    <script type="text/javascript" src="ect/scripts/upgrades.js"></script>
+    <script type="text/javascript" src="ect/scripts/checker.js"></script>
+    <script type="text/javascript" src="ect/scripts/clicker.js"></script>
+    <script type="text/javascript" src="ect/scripts/settings.js"></script>
+    <script type="text/javascript" src="ect/scripts/phone.js"></script>
+    <script type="text/javascript" src="ect/scripts/startUp.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-87006229-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <div id="but">
+        <button id="phoneBut" onclick="openPhone();"><span id="spanPhone">1</span></button>
+        <button id="options" class="right" onclick="achievements(); ">achievements</button>
+        <button id="options" style="left: 26vw;" onclick="options(); ">Options</button>
+        <div id="phone">
+             <div id="screen">
+                 <div id="contacts">
+                   <div id="sdMes" class="message new" title="sugardad" onclick="showDaddy(this, 'sd');">
+                      <div id="sender" >
+                       Sugar Daddy
+                      </div>
+                    </div>
+                    <div id="aMes" class="message new" title="ach" onclick="showDaddy(this, 'a');">
+                      <div id="sender">
+                       achievements
+                      </div>
+                   </div>
+                 </div>
+                 <div id="mBack" onclick="document.getElementById('contacts').style.left = '0%'; senderId = '';"> </div>
+                 <div id="textField">
+                     <div id="sd" class="holder">
+                         <h8>Hey honey, hope you're having a good dag. If you need anything, just take daddys wallet, I'm sure you will know where it will be. Love you xo</h8>
+                     </div>
+                     <div id="a" class="holder">
+                         <h8>When ever you will get an achievement, i will inform you so that you can collect your price!</h8>
+                     </div>
+                 </div>
+                 <div id="type">
+                     <input type="text" id="typetype" placeholder="Type here..."/>
+                 </div>
+                 <div id="askBG">
+                     <h7 class="snake" style="top: 13%; z-index: 0; font-size: 1vw; text-shadow: 1px 1px 0 #EBD1E2 , -1px -1px 0 #EBD1E2 , 1px -1px 0 #EBD1E2 , -1px 1px 0 #EBD1E2, 0 .2vw 0 rgba(0,0,0,0.24) ;">Wanna play JumpyCoin?</h7>
+                     <div class="snake div"  id="SettingButton" style="margin-right: 3%; left: 0; height: 34%;text-align: center;line-height: 3.2vw;" onclick="playSnake();">
+                         Sure
+                     </div>
+                     <button  class="snake" id="SettingButton" style="margin-left: 3%; right: 0; height: 40%;" onclick="document.getElementById('askBG').style.bottom = '-50%';">
+                         Nope
+                     </button>
+                 </div>
+             </div>
+        </div>
+        <div id="cookieOptions"> If you don't care about cookies click the <span style="cursor: pointer;" onclick="document.getElementById('cookieOptions').remove();">x</span>, otherwise click <strong style="cursor: pointer; transition:all ease .2s;" onmouseover="this.style.color = '#F5C7C9';" onmouseout="this.style.color = '#FFFFFF';" onclick="cookieInfo();">this</strong> <span style="position:absolute;right: 3%; cursor:pointer;" onclick="document.getElementById('cookieOptions').remove();">x</span></div>
+        <div id="Midte">
+            <div id="pusher" style="padding-left: 0%;">
+
+                <div id="Shop" style="width:45.29%; height: 6vw; z-index: 1; border: .8vw solid #f5c7c9;">
+                    <h4 style="z-index: 1;">Sugar Daddy Clicker</h4>
+                </div>
+
+                <div id="upgrades">
+                </div>
+
+                <img style="width: 16vw; position: absolute; bottom: 8vh; margin-left: 15vw; z-index: 0; pointer-events: none;" src="ect/billeder/upgrades.png " />
+
+                <div id="AddCoinsHere" style="position: absolute; width:100%; height: 100%; pointer-events: none;"></div>
+
+                <div id="board">
+                    <h6 id='score' style="font-size: 3vw;">0</h6>
+                    <h5 id="prKlik"> +1  </h5>
+                    <h5 id="prSek"> 0  </h5>
+                </div>
+
+
+                <img class="wallet" id="back" onclick="text(event);" onmousedown="down = true; this.style.marginTop = '18vw'; document.getElementById('front').style.marginTop = '18vw'; document.getElementById('sedel').style.marginTop = '15vw';" onmouseup="down = false; document.getElementById('front').style.marginTop = '17vw';  document.getElementById('back').style.marginTop = '17vw'; document.getElementById('sedel').style.marginTop = '17vw';" src="ect/billeder/wallet_bg.png" />
+                <img class="wallet" id="sedel" src="ect/billeder/wallet_sedel.png" onmousedown="down = true; this.style.marginTop = '15vw';  document.getElementById('front').style.marginTop = '18vw'; document.getElementById('back').style.marginTop = '18vw';" onmouseup="down = false; document.getElementById('front').style.marginTop = '17vw';  document.getElementById('back').style.marginTop = '17vw'; document.getElementById('sedel').style.marginTop = '17vw' ;" />
+                <img class="wallet" id="front" src="ect/billeder/wallet_front.png" style="-webkit-filter: drop-shadow(0px .4vw 0 rgba(0,0,0,0.24)); filter: drop-shadow(0px .4vw 0 rgba(0,0,0,0.24));" onmousedown="down = true; this.style.marginTop = '18vw';  document.getElementById('back').style.marginTop = '18vw'; document.getElementById('sedel').style.marginTop = '15vw';" onmouseup="down = false; document.getElementById('front').style.marginTop = '17vw';  document.getElementById('back').style.marginTop = '17vw'; document.getElementById('sedel').style.marginTop = '17vw' ;" />
+            </div>
+        </div>
+        <div id="Venstre">
+            <div id="cookies">
+                <div id="Shop" class="green">
+                    <h3 class="green" style="font-size:3.5vw;line-height:7vw;">cookies</h3>
+                </div>
+                <h7 style="top: 16%; z-index: 0;" class="green">What are Cookies?</h7>
+                <h9 style="top: 22%; ">Don’t worry, cookies are not dangerous. In fact, they aren’t even delicious unless you’re a web creator, then they can be pretty great. It is simply a way for the website to store data about you and your session to make the experience better. </h9>
+                <h7 style="top: 39%; z-index: 0; font-size: 1.8vw" class="green">Why do we use them?</h7>
+                <h9 style="top: 44%; margin-bottom: 10%;">On Sugar daddy clicker we use cookies in two ways. The first and most important way is to save your progress. If your click on “options” you will see that you can change how often the site “autosaves”. The way it saves is by collecting data like the number of shoes, your amount of honey, etc., and saving those as cookies, which are locally saved in your browser so it can be recovered on your next visit. <br /> The other way is through Google Analytics. This is a way for the creator to see information about the viewing sessions such as length of time, page views, devise and other things. But NO information that is the slightest personal is collected and that is important! </h9>
+                <button id="SettingButton" class="green" style="margin-left: 30%;" onclick="cookieInfo();">
+                    Close
+                </button>
+            </div>
+
+            <div id="settings" style="overflow: hidden;right: 0%;">
+                <div id="Shop" class="blue" style="box-shadow:none; -webkit-box-shadow:none; -moz-box-shadow:none;">
+                    <h3 class="blue" style="font-size:3.5vw;line-height:7vw;">Settings</h3>
+                </div>
+                <h7 style="top: 20%; z-index: 0;">Coins are enabled</h7>
+                <div class="onoffswitch" style="left: 8.3vw; top: 26.8%; z-index: 0;">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="coinSwitch" checked>
+                    <label class="onoffswitch-label" for="coinSwitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+                <h7 style="top: 35%; z-index: 0;">Autosave every:</h7>
+
+                <div class="range-slider" style="position: absolute ;top: 38%;">
+                    <input class="range-slider__range" type="range" id="RangeAutoSave" value="5" min="1" max="120">
+                    <span class="range-slider__value">0</span>
+                </div>
+
+                <button id="SettingButton" style="margin-right: 3%; left: 0;" onclick="cookies();">
+                    Save
+                </button>
+                <button id="SettingButton" style="margin-left: 3%; right: 0;" onclick="document.getElementById('trueReset').style.bottom = '0%';">
+                    Restart
+                </button>
+
+                <div id="trueReset">
+                    <h7 style="top: 13%; z-index: 0; font-size: 1vw; text-shadow: 1px 1px 0 #95c8d5 , -1px -1px 0 #95c8d5 , 1px -1px 0 #95c8d5 , -1px 1px 0 #95c8d5, 0 .2vw 0 rgba(0,0,0,0.24) ;">Are you sure you wanna reset?</h7>
+                    <button id="SettingButton" style="margin-right: 3%; left: 0; height: 40%;" onclick="resetAll();">
+                        Sure
+                    </button>
+                    <button id="SettingButton" style="margin-left: 3%; right: 0; height: 40%;" onclick="document.getElementById('trueReset').style.bottom = '-20%';">
+                        Nope
+                    </button>
+                </div>
+            </div>
+
+            <div id="inventory" style="right: 0%;">
+                <div id="Shop" style="box-shadow:none; -webkit-box-shadow:none; -moz-box-shadow:none;">
+                    <h3 style="font-size:3.5vw;line-height:7vw;">Inventory</h3>
+                </div>
+            </div>
+        </div>
+        <div id="Hojre">
+            <div id="achievements">
+                <div id="Shop" class="brun">
+                    <h3 class="brun" style="font-size:3vw;line-height:7vw;">achievements</h3>
+                </div>
+            </div>
+
+            <div id="ShopSide" style="left: 0%;">
+                <div id="Shop" style="box-shadow:none; -webkit-box-shadow:none; -moz-box-shadow:none;">
+                    <h3>Shop!</h3>
+                </div>
+                <div id='dOne' class='kob' style="margin-top:10.6vw;">
+                    <button id='bOne' class='bKob' onclick="oneKob()" onmouseover="info('One');" onmouseout="infoOut('One')">BUY!</button>
+                    <a id='besOne' class='besKob'>Shoes</a>
+                    <a id='pOne' class='pKob'>50 Honey money</a>
+                    <a id="aOne" class="antal">0</a>
+                </div>
+                <div id='dTwo' class='kob'>
+                    <button id='bTwo' class='bKob' onclick="twoKob()" onmouseover="info('Two');" onmouseout="infoOut('Two')">BUY!</button>
+                    <a id='besTwo' class='besKob'>  ?????</a>
+                    <a id='pTwo' class='pKob'>1.100 Honey money</a>
+                    <a id="aTwo" class="antal">0</a>
+                </div>
+                <div id='dThree' class='kob' style="visibility:hidden;" onmouseover="info('Three');" onmouseout="infoOut('Three')">
+                    <button id='bThree' class='bKob' onclick="threeKob()">BUY!</button>
+                    <a id='besThree' class='besKob'>  ?????</a>
+                    <a id='pThree' class='pKob'>12.000 Honey money</a>
+                    <a id="aThree" class="antal">0</a>
+                </div>
+                <div id='dFour' class='kob' style="visibility:hidden;" onmouseover="info('Four');" onmouseout="infoOut('Four')">
+                    <button id='bFour' class='bKob' onclick="fourKob()">BUY!</button>
+                    <a id='besFour' class='besKob'>  ?????</a>
+                    <a id='pFour' class='pKob'>130.000 Honey money</a>
+                    <a id="aFour" class="antal">0</a>
+                </div>
+                <div id='dFive' class='kob' style="visibility:hidden;" onmouseover="info('Five');" onmouseout="infoOut('Five')">
+                    <button id='bFive' class='bKob' onclick="fiveKob()">BUY!</button>
+                    <a id='besFive' class='besKob'>  ?????</a>
+                    <a id='pFive' class='pKob'>1.400.000 Honey money</a>
+                    <a id="aFive" class="antal">0</a>
+                </div>
+                <div id='dSix' class='kob' style="visibility:hidden;" onmouseover="info('Six');" onmouseout="infoOut('Six')">
+                    <button id='bSix' class='bKob' onclick="sixKob()">BUY!</button>
+                    <a id='besSix' class='besKob'>  ?????</a>
+                    <a id='pSix' class='pKob'>23.000.000 Honey money</a>
+                    <a id="aSix" class="antal">0</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var earnings = 0;
+        var value = 0;
+        var OnePris = 50;
+        var TwoPris = 1100;
+        var ThreePris = 12000;
+        var FourPris = 130000;
+        var FivePris = 1400000;
+        var SixPris = 23000000;
+        var One = 0;
+        var Two = 0;
+        var Three = 0;
+        var Four = 0;
+        var Five = 0;
+        var Six = 0;
+        var addStrength = 1;
+        var totClick = 0;
+
+        var mouseDown = false; //Skal ikke cookies
+        var autoClick = "0";
+        var autoClickValue = 0;
+        var autoNext = 0;
+        var autoTier = 1;
+        var holdClick = "0";
+        var holdClickValue = 99999999;
+        var holdNext = 0;
+        var holdTier = 1;
+        var addNext = 500;
+        var addTier = 1;
+        var OneTier = 10;
+        var TwoTier = 10;
+        var ThreeTier = 10;
+        var FourTier = 10;
+        var FiveTier = 10;
+        var SixTier = 10;
+
+        var AchOneTier = 1;
+        var AchTwoTier = 1;
+        var AchThreeTier = 1;
+        var AchFourTier = 1;
+        var AchFiveTier = 1;
+        var AchSixTier = 1;
+        var AchSevenTier = 1;
+        var AchEightTier = 1;
+        var highscore = 0;
+        var not = 1;
+
+        function addAchiements(imgNavn, titleE, underR, first, font1, font2, tierNummer, clas) {
+            var container = document.createElement("div");
+            container.className = "achievementsCont";
+            container.id = imgNavn;
+
+            var imgContainer = document.createElement("div");
+            imgContainer.className = "achievementsIndicator " + clas;
+            imgContainer.id = imgNavn + "ImgContainer";
+
+            var img = document.createElement("img");
+            img.style.backgroundImage = "url(/ect/billeder/" + imgNavn + ".png)";
+            img.id = "achievementsLogo";
+
+            var title = document.createElement("h10");
+            title.innerHTML = titleE;
+            title.id = imgNavn + "Title";
+            title.style.fontSize = font1 + "vw";
+
+            var under = document.createElement("h11");
+            under.innerHTML = underR;
+            under.id = imgNavn + "Under";
+            under.style.fontSize = font2 + "vw";
+            var tier = document.createElement("img");
+            tier.src = "ect/billeder/tier" + tierNummer + ".jpg";
+            tier.className = "tier";
+
+            var height = 9.5 + (5.5 * first)
+            container.style.top = height + "vw";
+
+            document.getElementById("achievements").appendChild(container);
+            container.appendChild(imgContainer);
+            imgContainer.appendChild(img);
+            container.appendChild(title);
+            container.appendChild(under);
+            container.appendChild(tier);
+        }
+        
+        //Check if this is a number
+        function isNumber(n) { return /^-?[\d.]+(?:e-?\d+)?$/.test(n); }
+
+
+        var int100;
+        $('.wallet').mousedown(function () {
+            clicker();
+            totClick++; 
+            int100 = setInterval(function () { clicker(); }, holdClickValue);
+        });
+
+        $('#typetype').bind("enterKey", function (e) {
+            sendMessage("", document.getElementById("typetype").value, "");
+        });
+        $('#typetype').keyup(function (e) {
+            if (e.keyCode == 13) {
+                $(this).trigger("enterKey");
+            }
+        });
+
+    </script>
+</body>
+</html>

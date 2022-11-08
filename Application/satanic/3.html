@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Greetings from satan</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-87006229-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</head>
+<body>
+    <style>
+        h5{
+            font-family:  'Comic Neue';
+            font-size: 4em;
+            width: 1em;
+            height: 1.6em;
+            color: black;
+            padding-top: .3em;
+            background-color: white;
+            margin: .05em;
+            float: left;
+        }
+    </style>
+    <h1>This is getting embaressing..</h1>
+    <h2>So yeah, I may have lost it again, and it may not have been the best way of getting your number before. I apologize..</h2>
+    
+    <div id="text">
+        <h5 id="a1">1</h5>
+        <h5 id="a2">0</h5>
+        <h5 id="a3">0</h5>
+        <h5 id="a4">0</h5>
+        <h5 id="a5">0</h5>
+        <h5 id="a6">0</h5>
+        <h5 id="a7">0</h5>
+        <h5 id="a8">0</h5>
+
+        <div id="controls" style="margin-top:0.2em;">
+            <button id="up" onclick="current++;" style="font-size:1.45em;">Set</button>
+            <button id="down" onclick="reset();" style="font-size:1.45em;">Reset</button>
+        </div>
+
+        <button id="Submit" class="Submit" onmousedown="buttonDown()" style="margin-top:1.2em;" onmouseup="window.location='4.html';">Submit</button>
+    </div>
+    <script>
+        setInterval(set, 150);
+        var current = 1;
+        var number = 1;
+        function set() {
+            if (number >= 9) {
+                number = 0;
+                document.getElementById("a" + current).innerHTML = number;
+            }
+            else {
+                number++;
+                document.getElementById("a" + current).innerHTML = number;
+            }
+        }
+        function reset() {
+            current = 1;
+            for (var i = 1; i < 9; i++) {
+                document.getElementById("a" + i).innerHTML = "0";
+            }
+        }
+    </script>
+</body>
+</html>

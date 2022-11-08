@@ -1,0 +1,27 @@
+<?php
+	$servername = "localhost";
+	$username = "broderse_timer";
+	$password = "b[=r3D*isalt";
+	$dbname = "broderse_cubeTimer";
+    $profileID =  $_REQUEST["e"];
+    $listIDlocal =  $_REQUEST["c"];
+
+	// Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    $dbNameGet = $profileID.$listIDlocal;
+	$sqql = "DROP TABLE `$dbNameGet`";
+    if (mysqli_query($conn, $sqql)) {
+		//Checker om den bliver uploaded
+	}
+	$sqql = "DELETE FROM `$profileID` WHERE `listID`='$listIDlocal'";
+        if (mysqli_query($conn, $sqql)) {
+    		//Checker om den bliver uploaded
+    	}
+	mysqli_close($conn);
+
+?>

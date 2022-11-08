@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Oliver Brodersen - Lidt om mig</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <style>
+        html {
+            width: 100%;
+        }
+        body {
+            background-color: black;
+        }
+
+        .logo {
+            width: 30%;
+            margin-top: 2%;
+            margin-left: 35%;
+            z-index: -7;
+        }
+
+        .bg, .sol {
+            width: 100%;
+            position: absolute;
+            bottom: -27%;
+            z-index: -8;
+        }
+
+        .bgg {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: -10;
+        }
+
+        .sol{
+            z-index:-9;
+            -webkit-animation-name: sol;
+            -webkit-animation-duration: 20s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-fill-mode:forwards;
+        }
+        @-webkit-keyframes sol{
+            0% {bottom: -27%;}
+            32% {bottom: 20%;}
+            42% {bottom: 20%;}
+            75% {bottom: 100%}
+            100% {bottom: 100%}
+        }
+        .måne{
+            position: absolute;
+            bottom: -27%;
+            width: 100%;
+            z-index:-9;
+            -webkit-animation-name: måne;
+            -webkit-animation-duration: 20s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-fill-mode:forwards;
+            -webkit-animation-delay: 10s;
+        }
+        @-webkit-keyframes måne{
+            0% {bottom: -27%;}
+            32% {bottom: 20%;}
+            42% {bottom: 20%;}
+            75% {bottom: 100%}
+            100% {bottom: 100%}
+        }
+
+        .støj {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0.5;
+            z-index: -5;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .men {
+            text-decoration: none;
+            float: left;
+            color: white;
+            font-family: AXIS;
+            font-size: 15px;
+            padding-top: 20px;
+            width: 10%;
+            border-top: 1px solid white;
+            margin: 2%;
+            text-align: center;
+            transition: padding-top .05s, border-top .05s;
+            left: 0;
+            
+        }
+
+            .men:hover {
+                padding-top: 10px;
+                border-top: 10px solid white;
+            }
+
+        .meno {
+            list-style-type: none;
+            margin-left: 40%;
+        }
+        .menu{
+            
+        }
+        
+
+    </style>
+    <img class="logo" src="logo 25.png" />
+    <div class="menu">
+        <ul class="meno">
+            <li class="men"><a href="index.html"> Forside </a></li>
+            <li class="men"><a href="byg selv.html"> Byg selv </a></li>
+        </ul>
+    </div>
+    <img class="støj" src="1.png" />
+    <img class="bg" src="gulv.jpg" />
+    <img class="sol" src="sol.png" />
+    <img class="bgg" src="bg.jpg" />
+    <img class="måne" src="måne.png" />
+    <style>
+        .fakta{
+            list-style-type:decimal;
+            position: absolute;
+            margin-top: 35%;
+            width: 40%;
+            margin-left: 24%;
+            margin-bottom: 200px;   
+            border: 10px solid #bcfbff;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #0cf2ff;
+            padding: 100px;
+            padding-left: 150px;
+            z-index: -6;
+        }
+        .faktali{
+            color: white;
+            font-family: AXIS;
+            font-size: 30px;
+            line-height: 50px;
+            text-shadow: 0 0 20px #0cf2ff;
+            z-index: -6;
+        }
+        .left, .right{
+            position: absolute;
+            top: 100%;
+            margin: 5%;
+            z-index:-6;
+            image-rendering:optimizeQuality;
+        }
+        .right{
+            right: 0;
+        }
+    </style>
+    <video autoplay="autoplay" loop="loop" class="left">
+        <source src="tri.mp4" type="video/mp4" />
+    </video>
+    <video autoplay="autoplay" loop="loop" class="right">
+        <source src="tri.mp4" type="video/mp4" />
+    </video>
+        <ul class="fakta">
+            <li class="faktali">Jeg hedder Oliver Vincent Sand Brodersen</li>
+            <li class="faktali">Jeg er 17 år</li>
+            <li class="faktali">Jeg arbejder i Megascope og fit&sund Horsens</li>
+            <li class="faktali">Jeg har en søster og en hund (same)</li>
+            <li class="faktali">Mine forældre er skilt</li>
+            <li class="faktali">Jeg har en k, som er en rigtig pige</li>
+            <li class="faktali">Jeg syntes Simon er høj</li>
+            <li class="faktali">Big Bang Theory er nok min yndlingsserie</li>
+            <li class="faktali">Casey Neistat er min yndlings-Youtuber</li>
+            <li class="faktali">Spionen fra U.N.C.L.E. er nok min yndlingsfilm</li>
+            <li class="faktali">Jeg kan rigtig godt lide byg-selv-burgere</li>
+            <li class="faktali">Jeg kan rigtig godt lide Simons lakselasagne, som han har en opskrift på på hans hjemmeside (sponsoreret punkt)</li>
+            <li class="faktali">Booster Free er min yndlings-Booster</li>
+            <li class="faktali">Jeg har lavet et par hjemmesider før denne</li>
+            <li class="faktali">Katte er ikke hunde og er derfor ikke lige så gode som hunde</li>
+            <li class="faktali">Batman over Superman</li>
+            <li class="faktali">Deadpool over Batman</li>
+            <li class="faktali">M&M's med peanuts er bedst</li>
+            <li class="faktali">Sour cream & onion er den bedste standard chipssmag</li>
+            <li class="faktali">Jeg har stadig en k som er en rigtig pige</li>
+            <li class="faktali">Jeg ber' til Harambe</li>
+            <li class="faktali">DER SKAL ANANAS PÅ PIZZA</li>
+            <li class="faktali">Jeg har ca. 46 kromosomer</li>
+            <li class="faktali">Jeg har ikke betalt for PhotoShop</li>
+            <li class="faktali">Jeg er bange for flyvende dyr, men Simon er bange for tuscher, så det er okay</li>
+        </ul>
+</body>
+</html>

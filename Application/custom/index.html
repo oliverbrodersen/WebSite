@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>ZEUS POWERBANK | CUSTOM SUITE</title>
+    <link href="style.css" media="all" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo|Hind|Inconsolata|Josefin+Sans|Lobster+Two|Pacifico" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- made by www.metatags.org -->
+    <meta name="description" content="Customize your ZEUS Hybrid Powerbank, and make the super fast charging power bank even more unique" />
+    <meta name="keywords" content="zeus,powerbank,superkondensatore,startup,astrapi,tech,astrapi tech,zeus hybrid powerbank,zeus powerbank,power bank" />
+    <meta property="og:image" content="http://astrapitech.com/images/design%20sutie%20cover%20site.jpg?crc=168105238">
+    <meta name="author" content="metatags generator">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 month">
+    <title>ZEUS Hybrid Powerbank | Full days battery in just 5 min</title>
+    <!-- power bank, zeus, astrapi tech -->
+
+</head>
+<body>
+    <div id="beta">BETA</div>
+    <div id="loadScreen">
+        <div id="loading">Loading</div>
+    </div>
+    <video width="936" height="585" id="video">
+        <source src="img/anim.mp4" type="video/mp4">
+    </video>
+
+    <button class="info" id="info" onclick="infos();"></button>
+    <img id="logo" src="img/suitelogo.svg"/>
+    <div id="canvasText">
+
+    </div>
+    <img width="600" height="354" id="powerbankImg" src="img/powerbank.png" />
+    <div id="url">
+        <input id="urlOutput" type="text" value="No url yet" autofocus="autofocus" onfocus="this.select()"/>
+    </div>
+    <div id="tools">
+        <button class="tool" id="images" onclick="img();"        ></button>
+        <button class="tool" id="move"  onclick="mover();"      ></button>
+        <button class="tool" id="link"  onclick="generateURL();"></button>
+        <button class="tool" id="retry" onclick="retry();"      ></button>
+    </div>
+    <div id="foot">
+        <div id="OverText">
+            <div class="input over">
+                <a>Font size</a>
+                <input type="text" value="78px" id="sizeOver"/>
+            </div>
+            <div class="input over">
+                <a>Font</a>
+                <select id="fontOver">
+                    <option value="'Times New Roman'">Times New Roman</option>
+                    <option value="'Boogaloo', cursive">Boogaloo</option>
+                    <option value="'Lobster Two', cursive">Lobster Two</option>
+                    <option value="'Pacifico', cursive">Pacifico</option>
+                    <option value="'Josefin Sans', sans-serif">Josefin Sans</option>
+                    <option value="'Inconsolata', monospace">Inconsolata</option>
+                    <option value="'Hind', sans-serif">Hind</option>
+                </select>
+            </div>
+            <div class="input over">
+                <a>Type</a>
+                <input type="text" value="ZEUS" id="textOver" />
+            </div>
+        </div>
+        <div id="seperator">
+
+        </div>
+        <div id="UnderText">
+            <div class="input">
+                <a>Font size</a>
+                <input type="text" value="30px" id="sizeUnder" />
+            </div>
+            <div class="input">
+                <a>Font</a>
+                <select id="fontUnder">
+                    <option value="'Times New Roman'">Times New Roman</option>
+                    <option value="'Boogaloo', cursive">Boogaloo</option>
+                    <option value="'Lobster Two', cursive">Lobster Two</option>
+                    <option value="'Pacifico', cursive">Pacifico</option>
+                    <option value="'Josefin Sans', sans-serif">Josefin Sans</option>
+                    <option value="'Inconsolata', monospace">Inconsolata</option>
+                    <option value="'Hind', sans-serif">Hind</option>
+                </select>
+            </div>
+            <div class="input">
+                <a>Type</a>
+                <input type="text" value="POWERBANK" id="textUnder" />
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="script.js"></script>
+</html>
